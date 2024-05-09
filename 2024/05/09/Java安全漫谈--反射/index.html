@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.8.0">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://qingwan.top/archives/2024/01/"/>
+  
+  <link rel="canonical" href="https://qingwan.top/2024/05/09/java安全漫谈--反射/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,17 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2024/1 - 清风菀月轩</title>
+  <title>Java安全漫谈学习笔记① -- Java反射 (1-3) - 清风菀月轩</title>
   <meta name="keywords" content="undefined">
-  <meta desc name="description" content="个人博客 - Qingwan - 清风菀月轩">
+  <meta desc name="description" content="这个系列的博客主要是在看P神的安全漫谈之后的一些笔记还有对应一些地方的扩展以及自己的了解。 - Qingwan - 清风菀月轩">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="清风菀月轩">
-<meta property="og:url" content="https://qingwan.top/archives/2024/01/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java安全漫谈学习笔记① -- Java反射 (1-3)">
+<meta property="og:url" content="https://qingwan.top/2024/05/09/Java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88--%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="清风菀月轩">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="这个系列的博客主要是在看P神的安全漫谈之后的一些笔记还有对应一些地方的扩展以及自己的了解。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-05-09T07:20:09.659Z">
+<meta property="article:modified_time" content="2024-05-09T07:26:51.931Z">
 <meta property="article:author" content="Qingwan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2507,7 +2509,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="half" class='cover-wrapper post search' style="display: ;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://qingwan.top/images/QQ图片20230810032028.png"></div>
 
@@ -2578,40 +2580,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/28/BURP-SQL注入/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/05/09/Java安全漫谈--反射/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="清风菀月轩">
   </span>
@@ -2620,627 +2590,407 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="个人博客">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/28/BURP-SQL%E6%B3%A8%E5%85%A5/"  itemprop="url">
-        Burpsuite--SQL注入相关实验
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
     
-      <p>本文讲了Burpsuite实验室中和SQL注入有关的18个实验的思路以及SQL注入的防御方法</p>
+    
+      <h1 class="title" itemprop="name headline">
+        Java安全漫谈学习笔记① -- Java反射 (1-3)
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">Qingwan</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Java%E5%AD%A6%E4%B9%A0/">Java学习</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Java%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">Java学习</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-28T18:11:26+08:00">2024-01-28</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/web/">web</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/web/" itemprop="url"><span itemprop="name">web</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-09T15:20:09+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2024年5月9日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <p>这个系列的博客主要是在看P神的安全漫谈之后的一些笔记还有对应一些地方的扩展以及自己的了解。</p>
+<span id="more"></span>
+
+<h2 id="Java基础知识"><a href="#Java基础知识" class="headerlink" title="Java基础知识"></a>Java基础知识</h2><p>在学习反射之前，我们先了解一下关于 <code>java</code> 的基础知识</p>
+<ol>
+<li><p>java运行的全过程</p>
+<blockquote>
+<p>Java源代码—-&gt;编译器—-&gt;jvm可执行的Java字节码(即虚拟指令)—-&gt;jvm—-&gt;jvm中解释器—–&gt;机器可执行的二进制机器码—-&gt;程序运行。</p>
+</blockquote>
+</li>
+<li><p>java和c++的区别</p>
+</li>
+</ol>
+<ul>
+<li>都是面向对象的语言，都支持封装、继承和多态</li>
+<li>Java不提供指针来直接访问内存，程序内存更加安全</li>
+<li>Java的类是单继承的，C++支持多重继承；虽然Java的类不可以多继承，但是接口可以多继承。</li>
+<li>Java有自动内存管理机制，不需要程序员手动释放无用内存</li>
+</ul>
+<h3 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h3><ol>
+<li>数据类型<br>①基本数据类型</li>
+</ol>
+<ul>
+<li>数值型<ul>
+<li>整数类型(byte,short,int,long)</li>
+<li>浮点类型(float,double)</li>
+</ul>
+</li>
+<li>字符型(char)</li>
+<li>布尔型(boolean)<br>②引用数据类型<br>引用数据类型</li>
+<li>类(class)</li>
+<li>接口(interface)</li>
+<li>数组([])</li>
+</ul>
+<ol start="2">
+<li>访问修饰符</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>修饰符</th>
+<th>当前类</th>
+<th>同包</th>
+<th>子类</th>
+<th>其他包</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>private</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+<td>×</td>
+</tr>
+<tr>
+<td>default</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+<td>×</td>
+</tr>
+<tr>
+<td>protected</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>×</td>
+</tr>
+<tr>
+<td>public</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+</tr>
+</tbody></table>
+<ol start="3">
+<li>this关键字的用法<br>this是自身的一个对象，代表对象本身，可以理解为：指向对象本身的一个指针。<br>this的用法在java中大体可以分为3种：<br>① 普通的直接引用，this相当于是指向当前对象本身。</li>
+</ol>
+<p>② 形参与成员名字重名，用this来区分：<br>如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">public Person(String name, int age) &#123;</span><br><span class="line">    this.name = name;</span><br><span class="line">    this.age = age;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>③ 引用本类的构造函数，当为这个作用时<br><code>this（参数）</code>：调用本类中另一种形式的构造函数（应该为构造函数中的第一条语句）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Person&#123;</span><br><span class="line">    private String name;</span><br><span class="line">    private int age;</span><br><span class="line">    </span><br><span class="line">    public Person() &#123;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    public Person(String name) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    public Person(String name, int age) &#123;</span><br><span class="line">    //调用其他的构造方法</span><br><span class="line">        this(name);    </span><br><span class="line">        this.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>this用处大概可以总结到一段代码里</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">public class Person &#123;</span><br><span class="line">    private String name;</span><br><span class="line"></span><br><span class="line">    // 构造方法1：初始化姓名</span><br><span class="line">    public Person(String name) &#123;</span><br><span class="line">        this.name = name; // 使用this关键字区分实例变量和局部变量</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 构造方法2：不带参数</span><br><span class="line">    public Person() &#123;</span><br><span class="line">        this(&quot;Unknown&quot;); // 调用另一个构造方法初始化姓名</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 获取姓名</span><br><span class="line">    public String getName() &#123;</span><br><span class="line">        return this.name; // 返回实例变量name</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 设置姓名</span><br><span class="line">    public void setName(String name) &#123;</span><br><span class="line">        this.name = name; // 使用this关键字指代当前对象的实例变量</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 打印个人信息</span><br><span class="line">    public void printInfo() &#123;</span><br><span class="line">        System.out.println(&quot;Name: &quot; + this.name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 返回当前对象的引用</span><br><span class="line">    public Person getSelf() &#123;</span><br><span class="line">        return this;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 使用当前对象调用其他方法</span><br><span class="line">    public void doSomething() &#123;</span><br><span class="line">        // do something</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">public class Main &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        // 创建Person对象</span><br><span class="line">        Person person1 = new Person(&quot;Alice&quot;);</span><br><span class="line">        </span><br><span class="line">        // 使用构造方法2创建Person对象</span><br><span class="line">        Person person2 = new Person();</span><br><span class="line">        </span><br><span class="line">        // 输出姓名</span><br><span class="line">        System.out.println(&quot;Person 1 Name: &quot; + person1.getName());</span><br><span class="line">        System.out.println(&quot;Person 2 Name: &quot; + person2.getName());</span><br><span class="line">        </span><br><span class="line">        // 设置姓名</span><br><span class="line">        person1.setName(&quot;Bob&quot;);</span><br><span class="line">        System.out.println(&quot;Person 1 Name after modification: &quot; + person1.getName());</span><br><span class="line">        </span><br><span class="line">        // 返回当前对象的引用</span><br><span class="line">        Person self = person1.getSelf();</span><br><span class="line">        </span><br><span class="line">        // 调用其他方法</span><br><span class="line">        self.doSomething();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="反射"><a href="#反射" class="headerlink" title="反射"></a>反射</h2><ol>
+<li>什么是反射？反射的作用？<br>Java反射（Reflection）是Java编程语言中的一个强大特性，它允许程序在运行时检查和修改类、方法、字段和接口。这意味着你可以在程序运行时获取类的信息，创建对象，调用方法，甚至修改字段值，这一切都可以动态地进行。<br>定义：JAVA反射机制是在运行状态中，对于任意一个类，都能够知道这个类的所有属性和方法；对于任意一个对象，都能够调用它的任意一个方法，这种动态获取、调用对象方法的功能称为java语言的反射机制，程序在运行期可以拿到一个对象的所有信息。。</li>
+</ol>
+<p>反射是通过Class对象(字节码文件)，来知道某个类的所有属性和方法。也就是说通过反射我们可以获取构造器，对象，属性，方法。在JAVA框架中，很多类我们是看不见的，不能直接用类名去获取对象，只能通过反射去获取。</p>
+<p>对象可以通过反射获取他的类，类可以通过反射拿到所有⽅法（包括私有），拿到的⽅法可以调⽤，总之通过“反射”，我们可以将Java这种静态语⾔附加上动态特性。</p>
+<blockquote>
+<p>动态特性：“⼀段代码，改变其中的变量，将会导致这段代码产⽣功能性的变化，称之为动态特性”。</p>
+</blockquote>
+<p>在Java中，每个类都有一个与之关联的<code>Class</code>对象。你可以通过以下几种方式获取<code>Class</code>对象：</p>
+<ul>
+<li>使用<code>Class.forName()</code>方法，传入类的全路径名称。</li>
+<li>调用对象的<code>getClass()</code>方法。</li>
+<li>使用<code>.class</code>语法，例如<code>String.class</code>。</li>
+</ul>
+<p>一旦你有了<code>Class</code>对象，你就可以使用它来：</p>
+<ul>
+<li>获取类实现的接口。</li>
+<li>获取类的超类。</li>
+<li>访问类的构造函数、方法和字段。</li>
+</ul>
+<p>例如，你可以使用<code>getDeclaredMethods()</code>来获取类中声明的所有方法，或者使用<code>getField()</code>来访问类的公共字段。<br>Java反射还可以用于：</p>
+<ul>
+<li>动态创建对象。</li>
+<li>动态调用方法。</li>
+<li>动态操作属性。</li>
+</ul>
+<ol start="2">
+<li>反射中重要的方法</li>
+</ol>
+<ul>
+<li>获取类的⽅法： forName</li>
+<li>实例化类对象的⽅法： newInstance</li>
+<li>获取函数的⽅法： getMethod</li>
+<li>执⾏函数的⽅法： invoke</li>
+</ul>
+<ol start="3">
+<li><p>如何理解反射？<br>如何理解反射：平时我们要调用某个类中的方法的时候都需要创建该类的对象，通过对象去调用类里面的方法，反射则是一开始并不知道我要初始化的类对象是什么，自然也无法使用 new 关键字来创建对象了，在这种情况下（没有创建对象）我们都能够对它的方法和属性进行调用，我们把这种 动态获取对象信息和调用对象方法的功能称之为反射机制。</p>
+</li>
+<li><p>利用反射获取一个对象的步骤<br>获取类的 Class 对象实例（这里有三种方法，后面会讲到）-&gt; 根据 Class 对象实例获取 Constructor（构造函数） 对象 -&gt; 使用 Constructor 对象的 newInstance 方法(实例)获取反射类对象</p>
+</li>
+<li><p>反射的常见利用<br>用反射的地方一搬都是需要操作类的地方。这里先问下，反射机制的相关类在哪个包下？<br>答案是<code>java.lang.reflect.*</code>，比如：</p>
+</li>
+</ol>
+<blockquote>
+<p>java.lang.reflect.Method 代表字节码中的方法字节码。代表类中的方法。<br>  java.lang.reflect.Constructor 代表字节码中的构造方法字节码。代表类中的构造方法。<br>  java.lang.reflect.Field 代表字节码中的属性字节码。代表类中的成员变量（静态变量+实例变量）。</p>
+</blockquote>
+<p>那到底是怎么获取的呢？<br>① <strong>动态加载类和调用方法：</strong> 反射机制可以在运行时加载类，并调用类的方法。这在编写插件系统、框架和库时非常有用，因为它允许应用程序根据需要动态加载和调用类的功能。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> // 动态加载类和调用方法</span><br><span class="line">Class&lt;?&gt; clazz = Class.forName(&quot;com.example.MyClass&quot;);</span><br><span class="line">Object instance = clazz.newInstance();</span><br><span class="line">Method method = clazz.getMethod(&quot;myMethod&quot;, String.class);</span><br><span class="line">method.invoke(instance, &quot;parameter&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>② <strong>读取和修改类的字段：</strong> 反射机制使得可以在运行时获取和修改类的字段，即使这些字段是私有的。这在某些情况下（如序列化和反序列化）非常有用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 读取和修改类的字段</span><br><span class="line">Field field = clazz.getDeclaredField(&quot;myField&quot;);</span><br><span class="line">field.setAccessible(true); // 使私有字段可访问</span><br><span class="line">Object value = field.get(instance); // 读取字段值</span><br><span class="line">field.set(instance, newValue); // 修改字段值</span><br></pre></td></tr></table></figure>
+<p>③ <strong>构造对象：</strong> 反射机制可以使用类的构造器动态创建对象，甚至可以访问私有构造器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   // 构造对象</span><br><span class="line">Constructor&lt;?&gt; constructor = clazz.getDeclaredConstructor(String.class);</span><br><span class="line">constructor.setAccessible(true); // 使私有构造器可访问</span><br><span class="line">Object instance = constructor.newInstance(&quot;parameter&quot;);</span><br></pre></td></tr></table></figure>
+
+
+<ol start="6">
+<li>反射机制的优缺点<br>反射机制在Java中提供了灵活性和通用性，使得程序能够在运行时动态地操作类、方法和属性，这增强了代码的灵活性和可扩展性，同时也支持与外部资源交互，为框架和库的设计提供了便利。然而，反射也存在性能开销高、安全性差、代码复杂度增加以及调试困难等缺点，需要谨慎使用以权衡其带来的好处和代价。</li>
+</ol>
+<hr>
+<h2 id="安全漫谈①-③"><a href="#安全漫谈①-③" class="headerlink" title="安全漫谈①-③"></a>安全漫谈①-③</h2><h3 id="反射①"><a href="#反射①" class="headerlink" title="反射①"></a>反射①</h3><p>反射的第一篇文章主要讲了下 <code>forName()</code> 方法，这里简要介绍一下：<br>关于这个方法主要提出几个问题并且对其进行解决。</p>
+<ol>
+<li>他的作用是什么？</li>
+<li>使用方法是什么？</li>
+<li>他和其他获取类的方法有什么区别？</li>
+</ol>
+<p>首先第一个问题，直接说，<code>Class.forName</code> 方法的作用，就是<code>初始化给定的类</code>，通俗点说就是<code>要求JVM查找并加载指定的类</code>，也就是说JVM会执行该类的静态代码段，并返回与该类相关的Class对象。<code>Class.forName(xxx.xx.xx)</code>返回的是一个类。<br>至于他的使用方法，<code>forName</code> 有两个函数重载：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class.forName(String name)</span><br><span class="line"></span><br><span class="line">Class.forName(String name, boolean initialize, ClassLoader loader)</span><br></pre></td></tr></table></figure>
+
+<p>第⼀个就是我们最常⻅的获取class的⽅式，其实可以理解为第⼆种⽅式的⼀个封装：<br>默认情况下， <code>forName</code> 的第⼀个参数是类名；第⼆个参数表示是否初始化，这个参数为true时会加载执行静态函数的代码。；第三个参数就是 <code>ClassLoader</code> 。</p>
+<p>注意：使用这个方法必须知道<code>类的全路径名</code>。</p>
+<blockquote>
+<p>这里<code>ClassLoader</code>是什么，我们先不做详细的介绍，<code>ClassLoader</code>翻译过来就是类加载器，简单的说一下他的作用就是，当你运行一个 Java 程序时，Java 虚拟机（JVM）会负责加载程序中用到的类。<code>类加载器（ClassLoader）</code>是负责在运行时查找和加载类文件的组件。在Java中，所有的类，都是由<code>ClassLoader</code>加载到JVM中执行的，但JVM中不止一种<code>ClassLoader</code>。</p>
+</blockquote>
+<p>那知道 <code>forName()</code> 方法的作用和使用方法之后，我们就来用下面一段代码实验一下<br>第一种加载：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;  </span><br><span class="line">    public static void main(String[] args)  </span><br><span class="line">            throws ClassNotFoundException  </span><br><span class="line">    &#123;  </span><br><span class="line">        //通过forName方法获取类的实例</span><br><span class="line">Class c1 = Class.forName(&quot;java.lang.String&quot;);  </span><br><span class="line">        System.out.print(&quot;Class represented by c1: &quot;  </span><br><span class="line">                + c1.toString());  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二种加载：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">    public static void main(String[] args) throws ClassNotFoundException &#123;</span><br><span class="line">        // 指定要加载的类名</span><br><span class="line">        String className = &quot;java.lang.String&quot;;</span><br><span class="line">        </span><br><span class="line">        // 指定是否立即初始化加载的类（true 表示立即初始化）</span><br><span class="line">        boolean initialize = true;</span><br><span class="line">        </span><br><span class="line">        // 使用系统类加载器作为类加载器</span><br><span class="line">        ClassLoader loader = ClassLoader.getSystemClassLoader();</span><br><span class="line">        </span><br><span class="line">        // 调用 Class.forName() 方法加载类</span><br><span class="line">        Class&lt;?&gt; clazz = Class.forName(className, initialize, loader);</span><br><span class="line">        </span><br><span class="line">        // 输出加载的类名</span><br><span class="line">        System.out.println(&quot;Class represented by clazz: &quot; + clazz);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>第三个问题，要知道和其他方法的区别，那我们就得先知道还有哪些常用的方法<br> 1. 如果上下⽂中存在某个类的实例 obj ，那么我们可以直接通过<code>obj.getClass()</code> 来获取它的类。调用Object类的<code>getClass()</code>方法来得到Class对象。比如：  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;  </span><br><span class="line">    public static void main(String[] args) throws ClassNotFoundException &#123;  </span><br><span class="line">        // 假设使用 String 类来示例  </span><br><span class="line">        String x = &quot;Hello&quot;;  </span><br><span class="line">        Class c1 = x.getClass();  </span><br><span class="line">  </span><br><span class="line">        System.out.print(&quot;Class represented by c1: &quot;  </span><br><span class="line">                + c1.toString());  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法用的最少</p>
+<ol start="2">
+<li><p>使用Class类的中静态<code>forName()</code>方法获得与字符串相应的Class对象。就是我们前面说到的那个方法，也是最常用的一个方法。</p>
+</li>
+<li><p>获取Class类型对象的第三个方法最简单。用法就是：<code>Test.class</code>如果你已经加载了某个类，只是想获取到它的 java.lang.Class 对象，那么就直接拿它的 class 属性即可。这种方式虽然比较简单，但是需要导包，不然会编译错误，这一种方法不属于反射。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;  </span><br><span class="line">    public class MyClass &#123;  </span><br><span class="line">        // 一个简单的示例类  </span><br><span class="line">    &#125;  </span><br><span class="line">    public static void main(String[] args) &#123;  </span><br><span class="line">        // 使用 .class 属性获取 MyClass 类的 Class 对象  </span><br><span class="line">        Class&lt;?&gt; clazz = MyClass.class;  </span><br><span class="line">  </span><br><span class="line">        // 打印 Class 对象  </span><br><span class="line">        System.out.println(&quot;Class represented by clazz: &quot; + clazz);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>这三种方法主要在使用场景上有所不同<br><strong>调用对象的 <code>getClass()</code> 方法：</strong><br>    - 这种方式适用于已经存在对象实例，想要获取其对应的 <code>Class</code> 对象的情况。<br>    - 通常用于在运行时动态获取对象的类型信息，例如对于传入的参数对象，需要了解其具体的类型。<br><strong>使用 <code>Class.forName()</code> 方法：</strong><br>    - 这种方式适用于根据类名（字符串）动态地加载类，并获取其 <code>Class</code> 对象的情况。<br>    - 通常用于实现插件机制、动态配置类名等场景。<br><strong>直接使用 <code>.class</code> 属性：</strong><br>    - 这种方式是在编译时已知类名的情况下，直接获取该类的 <code>Class</code> 对象的一种简洁方式。<br>    - 通常用于已知类名的情况下，或者在静态上下文中（例如静态方法或静态代码块）获取类的 <code>Class</code> 对象。</p>
+<h3 id="反射②"><a href="#反射②" class="headerlink" title="反射②"></a>反射②</h3><p>第二篇呢开头指出，在正常情况下，除了系统类，如果我们想拿到一个类，需要先 import 才能使用。而使用<code>forName</code>就不需要，这样对于我们的攻击者来说就十分有利，我们可以加载任意类。</p>
+<p>Java的普通类 C1 中支持编写内部类 C2 ，而在编译的时候，会生成两个文件： <code>C1.class</code> 和<br><code>C1$C2.class</code> ，我们可以把他们看作两个无关的类，通过 <code>Class.forName(&quot;C1$C2&quot;)</code> 即可加载这个内部类。</p>
+<p>获得类以后，我们可以继续使用反射来获取这个类中的属性、方法，也可以实例化这个类，并调用方法<code>class.newInstance()</code> 的作用就是调用这个类的无参构造函数，这个比较好理解。不过，我们有时候<br>在写漏洞利用方法的时候，会发现使用 <code>newInstance</code> 总是不成功，这时候原因可能是：<br>① 你使用的类没有无参构造函数<br>② 你使用的类构造函数是私有的</p>
+<p>最常见的情况就是 <code>java.lang.Runtime</code> ，这个类在我们构造命令执行Payload的时候很常见，但<br>我们不能直接这样来执行命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class clazz = Class.forName(&quot;java.lang.Runtime&quot;);</span><br><span class="line">clazz.getMethod(&quot;exec&quot;, String.class).invoke(clazz.newInstance(), &quot;id&quot;);</span><br></pre></td></tr></table></figure>
+<p>会出现报错，原因是 <code>Runtime</code> 类的构造方法是私有的。<br>这里可能会问 为什么<code>Runtime</code> 类是私有的呢？为什么这其实涉及到很常见的设计模式：“单例模式”，也叫工厂模式。</p>
+<p>比如，对于Web应用来说，数据库连接只需要建立一次，而不是每次用到数据库的时候再新建立一个连<br>接，此时作为开发者你就可以将数据库连接使用的类的构造函数设置为私有，然后编写一个静态方法来获取：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class TrainDB &#123;</span><br><span class="line">private static TrainDB instance = new TrainDB();</span><br><span class="line">public static TrainDB getInstance() &#123;</span><br><span class="line">return instance;</span><br><span class="line">&#125;</span><br><span class="line">private TrainDB() &#123;</span><br><span class="line">// 建立连接的代码...</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样，只有类初始化的时候会执行一次构造函数，后面只能通过 <code>getInstance</code> 获取这个对象，避免建<br>立多个数据库连接。</p>
+<p>所以，<code>Runtime类</code>就是单例模式，我们只能通过 <code>Runtime.getRuntime()</code> 来获取到 <code>Runtime</code> 对<br>象。那这里可能又有个问题，为什么<code>Runtime.getRuntime()</code>就可以获取到呢？</p>
+<p>在 <code>Runtime</code> 类中，构造方法被私有化，这意味着无法直接通过 <code>new</code> 关键字来创建 <code>Runtime</code> 对象的实例。然而，<code>Runtime</code> 类提供了一个静态方法 <code>getRuntime()</code>，用于获取 <code>Runtime</code> 类的唯一实例。</p>
+<p>我们将上述Payload进行修改即可正常执行命令了：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class clazz = Class.forName(&quot;java.lang.Runtime&quot;);clazz.getMethod(&quot;exec&quot;,String.class).invoke(clazz.getMethod(&quot;getRuntime&quot;).invoke(clazz),&quot;calc.exe&quot;);</span><br></pre></td></tr></table></figure>
+<p>这里用到了 <code>getMethod</code> 和 <code>invoke</code> 方法。我们在开头也提到过。</p>
+<p><code>getMethod</code> 的作用是通过反射获取一个类的某个特定的公有方法。Java中支持类的重载，我们不能仅通过函数名来确定一个函数。所以，在调用 <code>getMethod</code> 的时候，我们需要传给他你需要获取的函数的参数类型列表。</p>
+<p><img src="https://qingwan.top/images/2459.png" class="lazyload" data-srcset="https://qingwan.top/images/2459.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>我们使用最简单的，也就是第一个，它只有一个参数，类型是<code>String</code>，所以我们使用<br><code>getMethod(&quot;exec&quot;, String.class)</code> 来获取 <code>Runtime.exec</code> 方法。<code>String.class</code> 表示 <code>String</code> 类的 <code>Class</code> 对象，它指示了方法 <code>exec</code> 所接受的参数类型为 <code>String</code></p>
+<blockquote>
+<p>invoke 的作用是执行方法，它的第一个参数是：<br>如果这个方法是一个普通方法，那么第一个参数是类对象<br>如果这个方法是一个静态方法，那么第一个参数是类</p>
+</blockquote>
+<p>举个例子：</p>
+<ol>
+<li><p><strong>普通方法</strong>：普通方法是属于类的实例的方法，它们依赖于对象的存在。在调用普通方法时，第一个参数通常是该方法所属的类的实例（对象）。这个实例会作为调用方法的上下文，方法在执行时可以访问该实例的成员变量和其他方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Example &#123;</span><br><span class="line">    public void instanceMethod() &#123;</span><br><span class="line">        System.out.println(&quot;This is an instance method.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        Example obj = new Example();</span><br><span class="line">        Method method = Example.class.getMethod(&quot;instanceMethod&quot;);</span><br><span class="line">        method.invoke(obj); // 调用普通方法时，第一个参数是类对象</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在上面的例子中，<code>instanceMethod</code> 是一个普通方法，调用时需要传入一个 <code>Example</code> 类的实例作为第一个参数。</p>
+</li>
+<li><p><strong>静态方法</strong>：静态方法是属于类本身的方法，它们不依赖于类的实例。在调用静态方法时，第一个参数是该方法所属的类对象本身。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">public class Example &#123;</span><br><span class="line">    public static void staticMethod() &#123;</span><br><span class="line">        System.out.println(&quot;This is a static method.&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) throws Exception &#123;</span><br><span class="line">        Method method = Example.class.getMethod(&quot;staticMethod&quot;);</span><br><span class="line">        method.invoke(Example.class); // 调用静态方法时，第一个参数是类对象</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>在上面的例子中，<code>staticMethod</code> 是一个静态方法，调用时直接使用 <code>Example.class</code> 作为第一个参数即可。</p>
+</li>
+</ol>
+<p>所以，总结一下：</p>
+<ul>
+<li><strong>普通方法</strong>依赖于类的实例，需要使用实例对象来调用。</li>
+<li><strong>静态方法</strong>不依赖于类的实例，可以直接使用类本身来调用。</li>
+</ul>
+<p>所以我们正常执行方法是 <code>[1].method([2], [3], [4]...)</code> ，其实在反射里就是<br><code>method.invoke([1], [2], [3], [4]...)</code> 。</p>
+<p>举个例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">import java.lang.reflect.Method;  </span><br><span class="line">  </span><br><span class="line">public class Test &#123;  </span><br><span class="line">    public void printMessage(String message) &#123;  </span><br><span class="line">        System.out.println(&quot;Normal method: &quot; + message);  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    public static void main(String[] args) throws Exception &#123;  </span><br><span class="line">        Test obj = new Test();  </span><br><span class="line">  </span><br><span class="line">        // 正常方法调用  </span><br><span class="line">        obj.printMessage(&quot;Hello, world!&quot;);  </span><br><span class="line">  </span><br><span class="line">        // 反射调用  </span><br><span class="line">        Method method = Test.class.getMethod(&quot;printMessage&quot;, String.class);  </span><br><span class="line">        method.invoke(obj, &quot;Hello, world using reflection!&quot;);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>所以我们将上面命令执行的payload分解一下就可以得到</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Class clazz = Class.forName(&quot;java.lang.Runtime&quot;);</span><br><span class="line">Method execMethod = clazz.getMethod(&quot;exec&quot;, String.class);</span><br><span class="line">Method getRuntimeMethod = clazz.getMethod(&quot;getRuntime&quot;);</span><br><span class="line">Object runtime = getRuntimeMethod.invoke(clazz);</span><br><span class="line">execMethod.invoke(runtime, &quot;calc.exe&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="反射③"><a href="#反射③" class="headerlink" title="反射③"></a>反射③</h3><p>在上面第二篇结束的时候留下了两个问题</p>
+<ul>
+<li>如果一个类没有无参构造方法，也没有类似单例模式里的静态方法，我们怎样通过反射实例化该类呢？</li>
+<li>如果一个方法或构造方法是私有方法，我们是否能执行它呢？</li>
+</ul>
+<p>第一个问题，我们需要用到一个新的反射方法 <code>getConstructor</code>。<br>和 <code>getMethod</code> 类似， <code>getConstructor</code> 接收的参数是构造函数列表类型，因为构造函数也支持重载，所以必须用参数列表类型才能唯一确定一个构造函数。获取到构造函数后，我们使用 <code>newInstance</code> 来执行。<br>比如，我们常用的另一种执行命令的方式<code>ProcessBuilder</code>，我们使用反射来获取其构造函数，然后调用<br><code>start()</code> 来执行命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Class clazz = Class.forName(&quot;java.lang.ProcessBuilder&quot;);((ProcessBuilder)clazz.getConstructor(List.class).newInstance(Arrays.asList(&quot;calc.exe&quot;))).start();</span><br></pre></td></tr></table></figure>
+<p><code>ProcessBuilder</code>有两个构造函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public ProcessBuilder(List&lt;String&gt; command)</span><br><span class="line">public ProcessBuilder(String... command)</span><br></pre></td></tr></table></figure>
+<p>上面用到了第一个形式的构造函数，所以在 <code>getConstructor</code> 的时候传入的是 <code>List.class</code> 。</p>
+<p>但是，我们看到，前面这个Payload用到了Java里的强制类型转换，将 <code>newInstance</code> 返回的 <code>Object</code> 类型转换为 <code>ProcessBuilder</code> 类型。因为 <code>newInstance</code> 返回的是一个泛型为 <code>Object</code> 的对象，而我们知道它实际上是一个 <code>ProcessBuilder</code> 对象，所以我们进行了强制类型转换。有时候我们利用漏洞的时候（在表达式上下文中）是没有这种语法的。所以，我们仍需利用反射来完成这一步。</p>
+<p>其实用的就是前面讲过的知识：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class clazz = Class.forName(&quot;java.lang.ProcessBuilder&quot;);</span><br><span class="line">clazz.getMethod(&quot;start&quot;).invoke(clazz.getConstructor(List.class).newInstance(Arrays.asList(&quot;calc.exe&quot;)));</span><br></pre></td></tr></table></figure>
+
+<p>通过 <code>getMethod(&quot;start&quot;)</code> 获取到<code>start方法</code>，然后 <code>invoke</code> 执行，<code>invoke</code> 的第一个参数就是<code>ProcessBuilder Object</code>了。</p>
+<p>运行一下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import java.util.Arrays;  </span><br><span class="line">import java.util.List;  </span><br><span class="line">  </span><br><span class="line">public class Test &#123;  </span><br><span class="line">    public static void main(String[] args) &#123;  </span><br><span class="line">        try &#123;  </span><br><span class="line">            // 反射获取 ProcessBuilder 类  </span><br><span class="line">            Class clazz = Class.forName(&quot;java.lang.ProcessBuilder&quot;);  </span><br><span class="line">  </span><br><span class="line">            // 创建 ProcessBuilder 对象并启动进程  </span><br><span class="line">            clazz.getMethod(&quot;start&quot;).invoke(clazz.getConstructor(List.class).newInstance(Arrays.asList(&quot;calc.exe&quot;)));  </span><br><span class="line">        &#125; catch (Exception e) &#123;  </span><br><span class="line">            e.printStackTrace();  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那么，如果我们要使用 <code>public ProcessBuilder(String... command)</code> 这个构造函数，需要怎样用反射执行呢？<br>对于反射来说，如果要获取的目标函数里包含可变长参数，其实我们认为它是数组就行了。<br>所以，我们将字符串数组的类 <code>String[].class</code> 传给 <code>getConstructor</code> ，获取 <code>ProcessBuilder</code> 的第二种构造函数：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Class clazz = Class.forName(&quot;java.lang.ProcessBuilder&quot;);</span><br><span class="line">clazz.getConstructor(String[].class)</span><br></pre></td></tr></table></figure>
+<p>在调用 <code>newInstance</code> 的时候，因为这个函数本身接收的是一个可变长参数，我们传给<br><code>ProcessBuilder</code> 的也是一个可变长参数，二者叠加为一个二维数组，所以整个Payload如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Class clazz = Class.forName(&quot;java.lang.ProcessBuilder&quot;);</span><br><span class="line">((ProcessBuilder)clazz.getConstructor(String[].class).newInstance(new</span><br><span class="line">String[][]&#123;&#123;&quot;calc.exe&quot;&#125;&#125;)).start();</span><br></pre></td></tr></table></figure>
+
+<p>那第二个问题，如果一个方法或构造方法是私有方法，我们是否能执行它呢？<br>这就涉及到 <code>getDeclared</code> 系列的反射了，与普通的 <code>getMethod</code> 、 <code>getConstructor</code> 区别是：<br><code>getMethod</code> 系列方法获取的是当前类中所有公共方法，包括从父类继承的方法<code>getDeclaredMethod</code> 系列方法获取的是当前类中“声明”的方法，是实在写在这个类里的，包括私有的方法，但从父类里继承来的就不包含了。</p>
+<p><code>getDeclaredMethod</code> 的具体用法和 <code>getMethod</code> 类似， <code>getDeclaredConstructor</code> 的具体用法和<br><code>getConstructor</code> 类似，我就不再赘述。</p>
+<p>举个例子，前文说过<code>Runtime</code>这个类的构造函数是私有的，我们需要用 <code>Runtime.getRuntime()</code> 来获取对象。其实现在我们也可以直接用 <code>getDeclaredConstructor</code> 来获取这个私有的构造方法来实例化对象，进而执行命令，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import java.lang.reflect.Constructor;  </span><br><span class="line">import java.util.Arrays;  </span><br><span class="line">import java.util.List;  </span><br><span class="line">  </span><br><span class="line">public class Test &#123;  </span><br><span class="line">    public static void main(String[] args) &#123;  </span><br><span class="line">        try &#123;  </span><br><span class="line">            // 反射获取 ProcessBuilder 类  </span><br><span class="line">            Class clazz = Class.forName(&quot;java.lang.Runtime&quot;);  </span><br><span class="line">            Constructor m = clazz.getDeclaredConstructor();  </span><br><span class="line">            m.setAccessible(true);  </span><br><span class="line">            clazz.getMethod(&quot;exec&quot;, String.class).invoke(m.newInstance(), &quot;calc.exe&quot;);  </span><br><span class="line">        &#125; catch (Exception e) &#123;  </span><br><span class="line">            e.printStackTrace();  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可见，这里使用了一个方法 <code>setAccessible</code> ，这个是必须的。我们在获取到一个私有方法后，必须用<br><code>setAccessible</code> 修改它的作用域，否则仍然不能调用。</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2024/01/28/BURP-SQL%E6%B3%A8%E5%85%A5/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-09T15:26:51+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2024年5月9日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/23/ntlm relay/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清风菀月轩">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清风菀月轩">
-    <meta itemprop="description" content="个人博客">
-  </span>
+          
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2024/03/05/docker%E9%80%83%E9%80%B8/'>
+          <p class='title'>docker逃逸相关手法<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>本文主要讲了docker逃逸的原因，判断方法以及利用手法
+
+有时候无论是实战中还是在CTF中，在我们打进机器之后，发现在docker里面，这时候我们当然想逃逸到真实宿主机，所以就要用到docke...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2024/05/09/Java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88--%E5%8F%8D%E5%B0%84/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/23/ntlm%20relay/"  itemprop="url">
-        域渗透横向移动-Ntlm relay中继攻击
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Ntlm relay中Net-NTLM hash的获取方法以及relay方法</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-23T22:28:18+08:00">2024-01-23</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B8%97%E9%80%8F/">渗透</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B8%97%E9%80%8F/" itemprop="url"><span itemprop="name">渗透</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/23/ntlm%20relay/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/16/nss⑥/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清风菀月轩">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清风菀月轩">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/16/nss%E2%91%A5/"  itemprop="url">
-        NSSCTF刷题记录⑥--web
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>比较基础的一些web题⑥</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-16T21:39:16+08:00">2024-01-16</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/CTF%E5%81%9A%E9%A2%98wp/">CTF做题wp</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/CTF%E5%81%9A%E9%A2%98wp/" itemprop="url"><span itemprop="name">CTF做题wp</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/16/nss%E2%91%A5/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/12/PTH/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清风菀月轩">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清风菀月轩">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/12/PTH/"  itemprop="url">
-        域渗透横向移动--pass the hash
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>hash传递攻击的相关手法、防御措施及其绕过</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-12T12:42:44+08:00">2024-01-12</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B8%97%E9%80%8F/">渗透</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B8%97%E9%80%8F/" itemprop="url"><span itemprop="name">渗透</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/12/PTH/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/08/DedeCMS远程代码执行复现 （CVE-2022-35516）/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清风菀月轩">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清风菀月轩">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/08/DedeCMS%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%A4%8D%E7%8E%B0%20%EF%BC%88CVE-2022-35516%EF%BC%89/"  itemprop="url">
-        DedeCMS远程代码执行复现 （CVE-2022-35516）
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Dedecms框架漏洞复现⑤</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-08T15:50:31+08:00">2024-01-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/">代码审计</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" itemprop="url"><span itemprop="name">代码审计</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/08/DedeCMS%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%A4%8D%E7%8E%B0%20%EF%BC%88CVE-2022-35516%EF%BC%89/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/08/DedeCMS v5.7.105 -- RCE复现/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清风菀月轩">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清风菀月轩">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/08/DedeCMS%20v5.7.105%20--%20RCE%E5%A4%8D%E7%8E%B0/"  itemprop="url">
-        DedeCMS v5.7.105 -- RCE复现
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Dedecms框架漏洞复现④</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-08T15:44:46+08:00">2024-01-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/">代码审计</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" itemprop="url"><span itemprop="name">代码审计</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/08/DedeCMS%20v5.7.105%20--%20RCE%E5%A4%8D%E7%8E%B0/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/08/DedeCMS v5.7 SP2后台文件上传getshell（CVE-2019-8362）/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清风菀月轩">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清风菀月轩">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/08/DedeCMS%20v5.7%20SP2%E5%90%8E%E5%8F%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0getshell%EF%BC%88CVE-2019-8362%EF%BC%89/"  itemprop="url">
-        DedeCMS v5.7 SP2后台文件上传getshell（CVE-2019-8362）
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Dedecms框架漏洞复现③</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-08T15:41:22+08:00">2024-01-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/">代码审计</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" itemprop="url"><span itemprop="name">代码审计</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/08/DedeCMS%20v5.7%20SP2%E5%90%8E%E5%8F%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0getshell%EF%BC%88CVE-2019-8362%EF%BC%89/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/08/DeDeCMS v5.7 SP2 前台任意用户密码修改漏洞复现/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清风菀月轩">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清风菀月轩">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/08/DeDeCMS%20v5.7%20SP2%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/"  itemprop="url">
-        DeDeCMS v5.7 SP2 前台任意用户密码修改漏洞复现
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Dedecms框架漏洞复现②</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-08T15:37:00+08:00">2024-01-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/">代码审计</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" itemprop="url"><span itemprop="name">代码审计</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/08/DeDeCMS%20v5.7%20SP2%20%E5%89%8D%E5%8F%B0%E4%BB%BB%E6%84%8F%E7%94%A8%E6%88%B7%E5%AF%86%E7%A0%81%E4%BF%AE%E6%94%B9%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/08/dedecms-common.func.php RCE/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清风菀月轩">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清风菀月轩">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/08/dedecms-common.func.php%20RCE/"  itemprop="url">
-        DedeCMS v5.81 beta -- common.func.php RCE
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>Dedecms框架漏洞复现①</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-08T15:33:54+08:00">2024-01-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/">代码审计</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" itemprop="url"><span itemprop="name">代码审计</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/08/dedecms-common.func.php%20RCE/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/08/了解WAF&WAF的绕过/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="清风菀月轩">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="清风菀月轩">
-    <meta itemprop="description" content="个人博客">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2024/01/08/%E4%BA%86%E8%A7%A3WAF&WAF%E7%9A%84%E7%BB%95%E8%BF%87/"  itemprop="url">
-        了解WAF&WAF的绕过
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      <p>关于一些对WAF的了解以及WAF的绕过</p>
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2024-01-08T15:25:29+08:00">2024-01-08</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/%E6%B8%97%E9%80%8F/">渗透</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/%E6%B8%97%E9%80%8F/" itemprop="url"><span itemprop="name">渗透</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2024/01/08/%E4%BA%86%E8%A7%A3WAF&WAF%E7%9A%84%E7%BB%95%E8%BF%87/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-    
-  </section>
-  
-    
-      <br>
-      <div class="prev-next">
-        
-        <p class="current">
-          1 / 2
-        </p>
-        
-          <a class="next" rel="next" href="/archives/2024/01/page/2/">
-            <section class="post next white-box shadow floatable blur">
-              &nbsp;下一页&nbsp;<i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
-            </section>
-          </a>
-        
-      </div>
-    
-  
+  </article>
 
 
-	
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -3249,128 +2999,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box circle' href='/about/'>
-          <img no-lazy src='https://qingwan.top/images/qingwan.jpg'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>Qingwan</h2>
-        
-        
-        
-          <p><span id="jinrishici-sentence">清风菀月轩</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:qingwan.999@gmail.com"
-              class="social fa-solid fa-envelope flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-          
-            <a href="https://github.com/qingwan03"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/CTF%E5%81%9A%E9%A2%98wp/" href="/categories/CTF%E5%81%9A%E9%A2%98wp/"
-            active-action="action-categoriesCTFE5819AE9A298wp"
-            ><div class='name'>CTF做题wp</div><div class='badge'>(7)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/Java%E5%AD%A6%E4%B9%A0/" href="/categories/Java%E5%AD%A6%E4%B9%A0/"
-            active-action="action-categoriesJavaE5ADA6E4B9A0"
-            ><div class='name'>Java学习</div><div class='badge'>(1)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/web/" href="/categories/web/"
-            active-action="action-categoriesweb"
-            ><div class='name'>web</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/"
-            active-action="action-categoriesE4BBA3E7A081E5AEA1E8AEA1"
-            ><div class='name'>代码审计</div><div class='badge'>(5)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E6%B8%97%E9%80%8F/" href="/categories/%E6%B8%97%E9%80%8F/"
-            active-action="action-categoriesE6B897E9808F"
-            ><div class='name'>渗透</div><div class='badge'>(6)</div></a></li>
-        
-          <li><a class="flat-box"
-            title="/categories/%E9%9A%8F%E7%AC%94/" href="/categories/%E9%9A%8F%E7%AC%94/"
-            active-action="action-categoriesE99A8FE7AC94"
-            ><div class='name'>随笔</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Java%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-text">Java基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-text">基础语法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84"><span class="toc-text">反射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88%E2%91%A0-%E2%91%A2"><span class="toc-text">安全漫谈①-③</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E2%91%A0"><span class="toc-text">反射①</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E2%91%A1"><span class="toc-text">反射②</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%B0%84%E2%91%A2"><span class="toc-text">反射③</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -3398,13 +3068,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -4015,7 +3686,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://qingwan.top/","name":"清风菀月轩"}},{"@type":"ListItem","position":2,"item":{"@id":"https://qingwan.top/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://qingwan.top/archives/2024/","name":"2024年"}},{"@type":"ListItem","position":4,"item":{"@id":"https://qingwan.top/archives/2024/1/","name":"1月"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清风菀月轩","url":"https://qingwan.top/","description":"个人博客","author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","description":"个人博客"},"publisher":{"@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://qingwan.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"个人博客","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/"},"publisher":{"@type":"Organization","name":"清风菀月轩","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://qingwan.top/","name":"清风菀月轩"}},{"@type":"ListItem","position":2,"item":{"@id":"https://qingwan.top/categories/Java学习/","name":"Java学习"}},{"@type":"ListItem","position":3,"item":{"@id":"https://qingwan.top/2024/05/09/Java安全漫谈--反射/","name":"Java安全漫谈学习笔记① -- Java反射 (1-3)"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清风菀月轩","url":"https://qingwan.top/","description":"个人博客","author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","description":"个人博客"},"publisher":{"@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://qingwan.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Java安全漫谈学习笔记① -- Java反射 (1-3)","description":"这个系列的博客主要是在看P神的安全漫谈之后的一些笔记还有对应一些地方的扩展以及自己的了解。","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://qingwan.top/2024/05/09/Java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88--%E5%8F%8D%E5%B0%84/"},"author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/"},"publisher":{"@type":"Organization","name":"清风菀月轩","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://qingwan.top/2024/05/09/Java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88--%E5%8F%8D%E5%B0%84/","wordCount":45,"datePublished":"2024-05-09T07:20:09.659Z","dateModified":"2024-05-09T07:26:51.931Z","articleSection":"Java学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
